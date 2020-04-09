@@ -10,110 +10,111 @@
 
 <body>
 
-  <div id="container">
-    <div class="header">
-      <h1><a href="index.html" id="title_guide">Guide for HTML & XHTML</a></h1>
-      <p>A <b>responsive</b> website created by Team 2.</p>
+  <div class="header sombreado">
+    <h1><a href="index.html" id="title_guide">Guide for HTML & XHTML</a></h1>
+    <p>A <b>responsive</b> website created by Team 2.</p>
+  </div>
+
+
+  <div class="center">
+    <!-- MENU -->
+    <div class="menu sombreado">
+      <ul>
+        <li><a class="menulink" href="index.html">What is HTML?</a></li>
+        <li><a class="menulink" href="differences.html">Differences between HTML & XHTML</a></li>
+        <li><a class="menulink" href="tags.html">HTML tags</a></li>
+        <li><a class="menulink" href="versions.html">HTML & XHTML versions</a></li>
+        <li><a class="menulink" href="validations.html">HTML & XHTML validation</a></li>
+      </ul>
     </div>
+    <!-- CONTENT -->
+    <div class="content">
 
+      <h1>What are the differences between HTML and XHTML?</h1>
 
-    <div class="row">
-      <!-- MENU -->
-      <div class="menu">
-        <ul>
-          <li><a class="menulink" href="index.html">What is HTML?</a></li>
-          <li><a class="menulink" href="differences.html">Difference between HTML & XHTML</a></li>
-          <li><a class="menulink" href="tags.html">HTML tags</a></li>
-          <li><a class="menulink" href="versions.html">HTML & XHTML versions</a></li>
-          <li><a class="menulink" href="validations.html">HTML & XHTML validation</a></li>
-        </ul>
-      </div>
-      <!-- CONTENT -->
-      <div class="content">
+      <p>HTML and XHTML are both languages in which web pages are written. XHTML was derived from HTML to conform to XML standards. Hence, XHTML is stricter when compared to HTML. The reason for XHTML to be developed was that pages coded in HTML
+        appeared different depending on the browser due to lapses in coding or bad markup.</p>
 
-        <h1>What are the differences between HTML and XHTML?</h1>
+      <p>These are some of the most important differences between them:</p>
 
-        <p>HTML and XHTML are both languages in which web pages are written. XHTML was derived from HTML to conform to XML standards. Hence, XHTML is stricter when compared to HTML. The reason for XHTML to be developed was that pages coded in HTML
-          appeared different depending on the browser due to lapses in coding or bad markup.</p>
+      <table class="rwd-table">
+        <tr>
+          <th>Valid in HTML</th>
+          <th>Changes in XHTML to be valid</th>
 
-        <p>These are some of the most important differences between them:</p>
+        </tr>
+        <tr>
+          <td data-th="Valid in HTML">The DOCTYPE declaration is optional.</td>
+          <td data-th="Changes in XHTML to be valid">The DOCTYPE declaration is mandatory.<br />Example:<br /><code>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;</code>
+          </td>
 
-        <table class="rwd-table">
-    <tr>
-      <th>Valid in HTML</th>
-      <th>Changes in XHTML to be valid</th>
+        </tr>
+        <tr>
+          <td data-th="Valid in HTML">Some elements can be improperly nested.<br />Example:<br /><code>&lt;b&gt;&lt;i&gt;Something here&lt;/b&gt;&lt;/i&gt;</code></td>
+          <td data-th="Changes in XHTML to be valid">All elements must be properly nested.<br />Example:<br /><code>&lt;b&gt;&lt;i&gt;Something here&lt;/i&gt;&lt;/b&gt;</code></td>
 
-    </tr>
-    <tr>
-     <td data-th="Valid in HTML">The DOCTYPE declaration is optional.</td>
-              <td data-th="Changes in XHTML to be valid">The DOCTYPE declaration is mandatory.<br />Example:<br /><code>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;</code></td>
+        </tr>
+        <tr>
+          <td data-th="Valid in HTML">Some elements may not be closed.<br />Example:<br /><code>&lt;p&gt;This is a paragraph</code></td>
+          <td data-th="Changes in XHTML to be valid">All elements must always be closed.<br />Example:<br /><code>&lt;p&gt;This is a paragraph&lt;/p&gt;</code></td>
+        </tr>
 
-    </tr>
-    <tr>
-     <td data-th="Valid in HTML">Some elements can be improperly nested.<br />Example:<br /><code>&lt;b&gt;&lt;i&gt;Something here&lt;/b&gt;&lt;/i&gt;</code></td>
-              <td data-th="Changes in XHTML to be valid">All elements must be properly nested.<br />Example:<br /><code>&lt;b&gt;&lt;i&gt;Something here&lt;/i&gt;&lt;/b&gt;</code></td>
+        <tr>
+          <td data-th="Valid in HTML">Empty elements may not be closed.<br />Example:<br />A break: <code>&lt;br&gt;</code><br />An image: <code>&lt;img src="dog.gif" alt="Dog"&gt;</code></td>
+          <td data-th="Changes in XHTML to be valid">All empty elements must always be closed. This can be done by including a closing tag or by including a slash before the end of the tag.<br />Example:<br />A break:
+            <code>&lt;br&gt;&lt;br/&gt;</code><br />A
+            break: <code>&lt;br/&gt;</code><br />An image: <code>&lt;img src="dog.gif" alt="Dog"/&gt;</code></td>
+        </tr>
+        <tr>
+          <td data-th="Valid in HTML">Elements can be in upper case.<br />Example:<br /><code>&lt;BODY&gt;&lt;P&gt;This is a paragraph.&lt;/P&gt;&lt;/BODY&gt;</code></td>
+          <td data-th="Changes in XHTML to be valid">All elements must be in lower case.<br />Example:<br /><code>&lt;body&gt;&lt;p&gt;This is a paragraph.&lt;/p&gt;&lt;/body&gt;</code></td>
+        </tr>
 
-    </tr>
-    <tr>
-        <td data-th="Valid in HTML">Some elements may not be closed.<br />Example:<br /><code>&lt;p&gt;This is a paragraph</code></td>
-              <td data-th="Changes in XHTML to be valid">All elements must always be closed.<br />Example:<br /><code>&lt;p&gt;This is a paragraph&lt;/p&gt;</code></td>
-    </tr>
+        <tr>
+          <td data-th="Valid in HTML">Attribute names can be in upper case.<br />Example:<br /><code>&lt;table WIDTH="100%"&gt;</code></td>
+          <td data-th="Changes in XHTML to be valid">Attribute names must be in lower case.<br />Example:<br /><code>&lt;table width="100%"&gt;</code></td>
+        </tr>
 
-    <tr>
-              <td data-th="Valid in HTML">Empty elements may not be closed.<br />Example:<br />A break: <code>&lt;br&gt;</code><br />An image: <code>&lt;img src="dog.gif" alt="Dog"&gt;</code></td>
-              <td data-th="Changes in XHTML to be valid">All empty elements must always be closed. This can be done by including a closing tag or by including a slash before the end of the tag.<br />Example:<br />A break: <code>&lt;br&gt;&lt;br/&gt;</code><br />A
-                break: <code>&lt;br/&gt;</code><br />An image: <code>&lt;img src="dog.gif" alt="Dog"/&gt;</code></td>
-            </tr>
-      <tr>
-              <td data-th="Valid in HTML">Elements can be in upper case.<br />Example:<br /><code>&lt;BODY&gt;&lt;P&gt;This is a paragraph.&lt;/P&gt;&lt;/BODY&gt;</code></td>
-              <td data-th="Changes in XHTML to be valid">All elements must be in lower case.<br />Example:<br /><code>&lt;body&gt;&lt;p&gt;This is a paragraph.&lt;/p&gt;&lt;/body&gt;</code></td>
-            </tr>
+        <tr>
+          <td data-th="Valid in HTML">Attribute values may not be enclosed in quotes.<br />Example:<br /><code>&lt;table width=100%&gt;</code></td>
+          <td data-th="Changes in XHTML to be valid">Attribute values must be enclosed in quotes.<br />Example:<br /><code>&lt;table width="100%"&gt;</code></td>
+        </tr>
 
-    <tr>
-              <td data-th="Valid in HTML">Attribute names can be in upper case.<br />Example:<br /><code>&lt;table WIDTH="100%"&gt;</code></td>
-              <td data-th="Changes in XHTML to be valid">Attribute names must be in lower case.<br />Example:<br /><code>&lt;table width="100%"&gt;</code></td>
-            </tr>
+        <tr>
+          <td data-th="Valid in HTML">Attribute minimization is allowed.<br />Example:<br /><code>&lt;input type="checkbox" name="vehicle" value="car" checked /&gt;</code><br /><code>&lt;input type="text" name="lastname" disabled /&gt;</code></td>
+          <td data-th="Changes in XHTML to be valid">Attribute minimization is forbidden.<br />Example:<br /><code>&lt;input type="checkbox" name="vehicle" value="car" checked="checked" /&gt;</code><br /><code>&lt;input type="text" name="lastname"
+              disabled="disabled" /&gt;</code></td>
+        </tr>
 
-    <tr>
-              <td data-th="Valid in HTML">Attribute values may not be enclosed in quotes.<br />Example:<br /><code>&lt;table width=100%&gt;</code></td>
-              <td data-th="Changes in XHTML to be valid">Attribute values must be enclosed in quotes.<br />Example:<br /><code>&lt;table width="100%"&gt;</code></td>
-            </tr>
-
-    <tr>
-              <td data-th="Valid in HTML">Attribute minimization is allowed.<br />Example:<br /><code>&lt;input type="checkbox" name="vehicle" value="car" checked /&gt;</code><br /><code>&lt;input type="text" name="lastname" disabled /&gt;</code></td>
-              <td data-th="Changes in XHTML to be valid">Attribute minimization is forbidden.<br />Example:<br /><code>&lt;input type="checkbox" name="vehicle" value="car" checked="checked" /&gt;</code><br /><code>&lt;input type="text" name="lastname" disabled="disabled" /&gt;</code></td>
-            </tr>
-
-    <tr>
-              <td data-th="Valid in HTML">The first line may not be the root element.</td>
-              <td data-th="Changes in XHTML to be valid">The first line has to be the root element &lt;html&gt;, and there can only be one.</td>
-            </tr>
-  </table>
+        <tr>
+          <td data-th="Valid in HTML">The first line may not be the root element.</td>
+          <td data-th="Changes in XHTML to be valid">The first line has to be the root element &lt;html&gt;, and there can only be one.</td>
+        </tr>
+      </table>
 
 
 
-        <p>The steps to convert from HTML to XHTML are as follow:</p>
-        <ol>
-          <li>Add an XHTML &lt;!DOCTYPE&gt; to the first line of every page.</li>
-          <li>Add an xmlns attribute to the html element of every page.</li>
-          <li>Change all element names to lowercase.</li>
-          <li>Close all empty elements.</li>
-          <li>Change all attribute names to lowercase.</li>
-          <li>Quote all attribute values.</li>
-        </ol>
-      </div>
+      <p>The steps to convert from HTML to XHTML are as follow:</p>
+      <ol>
+        <li>Add an XHTML &lt;!DOCTYPE&gt; to the first line of every page.</li>
+        <li>Add an xmlns attribute to the html element of every page.</li>
+        <li>Change all element names to lowercase.</li>
+        <li>Close all empty elements.</li>
+        <li>Change all attribute names to lowercase.</li>
+        <li>Quote all attribute values.</li>
+      </ol>
     </div>
   </div>
 
-  <div class="footer">
+  <div class="footer sombreado">
     <h2>Footer</h2>
     <p>Developed by Team 2.</p>
     <p>Members:</p>
     <ul id="members">
-        <li>Germán Asencio</li>
-        <li>Pablo Pagán</li>
-        <li>Jonathan López</li>
-        <li>Pedro Guzmán</li>
+      <li>Germán Asencio</li>
+      <li>Pablo Pagán</li>
+      <li>Jonathan López</li>
+      <li>Pedro Guzmán</li>
     </ul>
     <p class="validtags">Validated by: </p>
   </div>
