@@ -1,9 +1,18 @@
-Spanish to-do list:
+TO DO LIST
 
--
--
+German:
+- Implement Flexbox functionality
+- Fix responsive problem with menu when enlarged
 
-Turkish to-do list:
+Pedro:
+- Add border inside table
+- Add transition to menu items when hovered
 
--
--
+Jonatan:
+- Apply border-shadow to header, menu and footer
+- Change word difference to differences in menu
+
+Pablo:
+- Change header color
+- Change links color
+- Open link of validations in new tab 
