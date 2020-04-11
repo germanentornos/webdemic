@@ -1,0 +1,40 @@
+root{
+  padding: 50px;
+}
+
+name{
+  font-size:25px;
+  display: block;
+  margin-top:4%;
+  border: 1px solid black;
+  display: inline-block;
+  padding: 10px;
+  background: #8d9eaf;
+}
+
+definition{
+  display: block;
+  padding-bottom:1%;
+  padding-top:2%;
+  font-size:20px;
+}
+
+atribute_name{
+  display: block;
+  padding-bottom:1%;
+  padding-top:2%;
+  font-size:20px;
+
+}
+
+atribute_definition{
+  display:block;
+  font-size:20px;
+}
+
+example{
+  display: block;
+  padding-bottom:1%;
+  padding-top:2%;
+  font-size:15px;
+}

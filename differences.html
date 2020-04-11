@@ -5,16 +5,16 @@
   <title>Difference between HTML & XHTML</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="csspagina.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body>
 
   <div class="header sombreado">
     <h1><a href="index.html" id="title_guide">Guide for HTML & XHTML</a></h1>
-    <p>A <b>responsive</b> website created by Team 2.</p>
+    <h3>A <b>responsive</b> website created by Team 2.</h3>
   </div>
-
+  
 
   <div class="center">
     <!-- MENU -->
@@ -22,7 +22,7 @@
       <ul>
         <li><a class="menulink" href="index.html">What is HTML?</a></li>
         <li><a class="menulink" href="differences.html">Differences between HTML & XHTML</a></li>
-        <li><a class="menulink" href="tags.html">HTML tags</a></li>
+        <li><a class="menulink" href="xml-team2.xml">HTML tags</a></li>
         <li><a class="menulink" href="versions.html">HTML & XHTML versions</a></li>
         <li><a class="menulink" href="validations.html">HTML & XHTML validation</a></li>
       </ul>
@@ -107,17 +107,48 @@
   </div>
 
   <div class="footer sombreado">
-    <h2>Footer</h2>
-    <p>Developed by Team 2.</p>
-    <p>Members:</p>
-    <ul id="members">
-      <li>Germán Asencio</li>
-      <li>Pablo Pagán</li>
-      <li>Jonathan López</li>
-      <li>Pedro Guzmán</li>
-    </ul>
-    <p class="validtags">Validated by: </p>
+    <div class="footer-content">
+
+      <div class="footer-section about">
+        <h2>Made with love at</h2>
+        <a href="http://iesseveroochoa.edu.gva.es/" target="_blank"><img src="images/logoSevero.png" alt="Severo Ochoa" class="footer_image center_in_footer"></a>
+        <p id="validated">
+          <a href="http://validator.w3.org/check?uri=referer"><img src="http://www.w3.org/Icons/valid-xhtml11" alt="Valid XHTML 1.1" height="31" width="88" class="center_in_footer"/></a>
+          <a href="http://jigsaw.w3.org/css-validator/check/referer">
+            <img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss" alt="¡CSS Válido!" class="center_in_footer"/>
+          </a>
+        </p>
+      </div>
+
+      <div class="footer-section links">
+        <h2>Quick Links</h2>
+        <ul>
+          <li><a href="index.html">What is HTML</a></li>
+          <li><a href="differences.html">HTML vs XHTML</a></li>
+          <li><a href="xml-team2.xml">HTML tags</a></li>
+          <li><a href="versions.html">HTML versions</a></li>
+          <li><a href="validations.html">HTML validation</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section contact-form">
+        <h2>Contact us</h2>
+        <p id="form-parag">Help us improve. Feel free to send doubts or suggestions.</p>
+        <br>
+        <form action="index.html" method="post">
+          <input type="email" name="email" class="text-input contact-input" placeholder="Your email address...">
+          <textarea rows="3" name="message" class="text-input contact-input" placeholder="Your message..."></textarea>
+          <button type="submit" class="btn btn-big contact-btn">SEND</button>
+        </form>
+      </div>
+
+    </div>
+
   </div>
+  <div class="footer-bottom">
+    <p>&copy; htmlgenius.com | Designed by Germán Asencio, Jonatan López, Pedro Guzmán & Pablo Pagán.</p>
+  </div>
+
 
 </body>
 

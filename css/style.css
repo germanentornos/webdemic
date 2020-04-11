@@ -1,0 +1,389 @@
+/*So that all elements include the padding and border in an element's total width and height.*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+/*Necessary for correct footer display*/
+html, body {
+  height:100%;
+  font-family: Verdana;
+}
+
+/*To make title clickable*/
+#title_guide{
+  text-decoration: none;
+  color:white;
+  font-size: 1em;
+}
+
+/* Style the body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+a{
+  text-decoration: none;
+}
+
+textarea {
+  resize: none;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 60px;
+  text-align: center;
+  background: #314152;
+  color: white;
+  z-index: 2;
+}
+
+/* Increase the font size of the heading */
+.header h1 {
+  font-size: 60px;
+}
+
+.header h3 {
+  padding: 20px;
+}
+
+.sombreado{
+  -webkit-box-shadow: 0px 0px 6px -1px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 6px -1px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 6px -1px rgba(0,0,0,0.75);
+}
+
+/* Column container */
+.center {
+  display: -ms-flexbox; /* Para que funcione en Internet Explorer 10 */
+  display: flex;
+  overflow: auto;
+  flex: 1 0 auto;
+  justify-content: space-between;
+  min-height: 80%;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.menu {
+  -ms-flex: 10%; /* Para que funcione en Internet Explorer 10 */
+  flex: 10%;
+  background-color: #f1f1f1;
+  min-width: 200px;
+  max-width: 400px;
+  z-index: 1;
+}
+
+/* Main column */
+.content {
+  -ms-flex: 70%; /* Para que funcione en Internet Explorer 10 */
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+
+}
+
+.content p{
+	padding-left: 1%;
+}
+
+.content ul, ol{
+  padding-left: 4%;
+}
+
+h1{
+  padding-left: 1%;
+}
+
+h3{
+    padding-bottom:2%;
+    padding-top: 2%;
+    padding-left: 1%;
+}
+
+
+/*MENU*/
+
+.menulink{
+  color: black;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size:17px;
+  width: 100%;
+
+}
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: #efefef;
+}
+
+.menu li{
+  display: block;
+  color: #efefef;
+  padding: 8px 16px;
+  text-decoration: none;
+  width: 100%;
+  text-align: center;
+  transition: 0.7s;
+}
+.menu li a:hover {
+  background-color: #555;
+  color: white;
+  border-radius: .4em;
+  transition: 0.7s;
+}
+/*END MENU*/
+
+h1{
+  padding-bottom: 2%;
+  padding-top: 2%;
+}
+
+p{
+  padding-bottom: 1%;
+   line-height: 1.8;
+}
+
+li{
+  padding-bottom: 0.5%;
+}
+
+a {
+  color: #314152;
+}
+
+
+/*TABLE*/
+.rwd-table {
+  background: #37446c;
+  color: #fff;
+  border-radius: .4em;
+  overflow: hidden;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  border-collapse: collapse;
+  margin-left: 1%;
+}
+
+.rwd-table td, .rwd-table th {
+border: 1px solid white;
+border-color: #445c73;
+}
+
+.rwd-table tr:first-child th {
+  border-top: 0;
+}
+
+.rwd-table tr:last-child td {
+  border-bottom: 0;
+}
+
+.rwd-table tr td:first-child,
+.rwd-table tr th:first-child {
+  border-left: 0;
+}
+.rwd-table tr td:last-child,
+.rwd-table tr th:last-child {
+  border-right: 0;
+}
+
+th, td{
+  padding: 15px;
+}
+
+th{
+  font-size: 1.5em;
+  padding: 15px;
+  color: #aacfe3;
+}
+/*TABLE*/
+
+
+
+.btn{
+  padding: .5rem 1rem;
+  background: #fdce4b;
+  color: #314152;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  font-weight: bold;
+}
+
+.btn-big{
+  padding: .7rem 1.3rem;
+  line-height: 1.3rem;
+  border-bottom: 5px solid #D1B358;
+  border-left: 3px solid #D1B358;
+}
+
+.btn:hover{
+  color: #314152 !important;
+  background: #e4b738;
+}
+
+.text-input {
+  padding: .7rem 1rem;
+  display: block;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #e0e0e0;
+  outline: none;
+  color: #444;
+  line-height: 1.5rem;
+  font-family: 'Montserrat', serif;
+  font-size: 1.1em;
+}
+
+/* FOOTER */
+
+.footer {
+  background: #3e4354;
+  color: #d3d3d3;
+  height: 400px;
+  position: relative;
+  z-index: 3;
+}
+
+.footer .footer-content {
+  height: 350px;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+}
+
+.footer .footer-content .footer-section {
+  -webkit-flex: 1px;
+  -ms-flex: 1px;
+  flex: 1px;
+  padding: 25px;
+}
+
+.footer .footer-content h1,
+.footer .footer-content h2 {
+  color: white;
+}
+
+.footer .footer-content .links ul {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.footer .footer-content .links ul a {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1.1em;
+  transition: all .3s;
+  color: white;
+}
+
+.footer .footer-content .links ul a:hover {
+  color: white;
+  margin-left: 15px;
+  transition: all .3s;
+}
+
+
+
+.footer .footer-content .contact-form .contact-input {
+  background: #272727;
+  color: #bebdbd;
+  margin-bottom: 10px;
+  line-height: 1.5rem;
+  padding: .9rem 1.4rem;
+  border: none;
+}
+
+.footer .footer-content .contact-form .contact-input:focus {
+  background: #1a1a1a;
+}
+
+.footer .footer-content .contact-form .contact-btn {
+  float: right;
+  font-size: 1.1em;
+  font-family: 'Montserrat', serif;
+}
+
+.footer-bottom {
+  background: #343a40;
+  color: rgb(157, 166, 157);
+  height: 50px;
+  width: 100%;
+  text-align: center;
+  bottom: 0px;
+  left: 0px;
+  padding: 15px;
+}
+
+#form-parag{
+  padding-top: 10px;
+}
+
+.footer_image {
+  background: rgb(240, 247, 242);
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+#validated{
+  padding: 20px;
+}
+
+
+@media only screen and (max-width: 935px){
+
+  .footer {
+    height: auto;
+  }
+
+  .footer .footer-content {
+    height: auto;
+    flex-direction: column;
+  }
+
+  .footer .footer-content .contact-form {
+    padding-bottom: 90px;
+  }
+  .footer .footer-content .contact-form .contact-btn{
+    width: 100%;
+
+  }
+
+  .center_in_footer {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .footer-bottom {
+    height: auto;
+  }
+}
+/* // FOOTER */
+
+
+
+
+
+
+
+
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .center {
+    flex-direction: column;
+  }
+  .menu {
+    max-width: initial;
+  }
+}
