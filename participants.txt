@@ -1,13 +1,9 @@
-Repartiment de tasques del treball per a la primera entrega:
+Nou repartiment de tasques del treball per al segon i definitiu lliurament:
 
-→ El document XML s’ha creat repartint un mateix nombre d’etiquetes entre els quatre companys (Germán Asencio, Pedro Guzmán, Jonatan López i Pablo Pagán).
-
-→ Per a la creació de la pàgina web aquesta ha sigut la distribució de tasques:
-
-* GERMÁN: HTML i responsive design (Flexbox, footer)
-* JONATAN: HTML
-* PEDRO: CSS i responsive design (menu, table)
-* PABLO: CSS
+* GERMÁN: inclusió dels logos d'eTwinning i Creative Commons al footer. Desenvolupament del cercador d'etiquetes XML mitjançant JavaScript i DOM.
+* JONATAN: Bolcatge i millora de l'XML mitjançant XSLT i XHTML.
+* PEDRO: Bolcatge i millora de l'XML mitjançant XSLT i XHTML.
+* PABLO: Inclusió d'imatges a les pàgines What is HTML, HTML versions i HTML validations. Desenvolupament del cercador d'etiquetes XML mitjançant JavaScript i DOM.
 
 
 - No hi ha hagut cap col·laboració amb l’equip turc.
