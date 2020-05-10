@@ -96,6 +96,10 @@ textarea {
   padding-left: 4%;
 }
 
+.content a {
+  color: #dfb43d;
+}
+
 h1{
   padding-left: 1%;
 }
@@ -158,9 +162,7 @@ li{
   padding-bottom: 0.5%;
 }
 
-a {
-  color: #314152;
-}
+
 
 
 /*TABLE*/
@@ -263,9 +265,28 @@ th{
   padding: 25px;
 }
 
+.footer-section.about {
+  margin-left: 100px;
+}
+
+.footer-section.about p {
+    margin-top: 10px;
+}
+
+.footer-section.contact-form {
+  margin-right: 100px;
+}
+
 .footer-content h1,
 .footer-content h2 {
   color: white;
+}
+
+
+.footer-content #creative-commons {
+  color: #fdce4b;
+
+  /*  white   #e4b738 */
 }
 
 .footer-content .links ul {
@@ -278,11 +299,11 @@ th{
   margin-bottom: 10px;
   font-size: 1.1em;
   transition: all .3s;
-  color: white;
+  color: #d3d3d3;
 }
 
 .footer-content .links ul a:hover {
-  color: white;
+  color: #d3d3d3;
   margin-left: 15px;
   transition: all .3s;
 }
@@ -336,11 +357,23 @@ th{
 .footer_image {
   background: rgb(240, 247, 242);
   border-radius: 5px;
-  margin-top: 10px;
 }
 
 #validated{
-  padding: 20px; 
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+
+@media only screen and (max-width: 1500px){
+
+  .footer-section.about {
+    margin-left: 25px;
+  }
+
+  .footer-section.contact-form {
+    margin-right: 25px;
+  }
 }
 
 
@@ -349,6 +382,14 @@ th{
   .footer-content {
     height: auto;
     flex-direction: column;
+  }
+
+  .footer-section.about {
+    margin-left: initial;
+  }
+
+  .footer-section.contact-form {
+    margin-right: initial;
   }
 
   .footer-content .contact-form .contact-btn{
