@@ -153,7 +153,7 @@ h1{
   padding-top: 2%;
 }
 
-p{
+p {
   padding-bottom: 1%;
    line-height: 1.8;
 }
@@ -161,6 +161,46 @@ p{
 li{
   padding-bottom: 0.5%;
 }
+
+
+
+/* Imágenes de los div content */
+
+.image-div {
+  text-align:center;
+  color: #314152;
+  font-size: 90%;
+  margin: 15px;
+  width:300px;
+}
+
+.image-div.right {
+  float: right;
+}
+
+@media only screen and (max-width: 935px){
+  .image-div.right {
+    float: inherit;
+    display: block;
+    margin: 25px auto;
+  }
+}
+
+.image-div.centered {
+  display: block;
+  margin: 25px auto;
+}
+
+.content-image {
+  border-radius: 20px;
+  background: rgb(240, 247, 242);
+  box-shadow: 2px 2px 5px #999;
+  margin-bottom:0.5em;
+}
+
+
+/*    //   Imágenes de los div content    */
+
 
 
 
