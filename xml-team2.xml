@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/css" href="css/xml_style.css" media="screen"?>
+<?xml-stylesheet href="plantilla.xsl" type="text/xsl" ?>
+
 <root>
 	<tags>
 		<tag>
