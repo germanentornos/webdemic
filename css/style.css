@@ -1,32 +1,22 @@
-/*So that all elements include the padding and border in an element's total width and height.*/
-* {
+
+/*  GENERAL RULES */
+* {                          /*So that all elements include the padding and border in an element's total width and height.*/
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-
-/*Necessary for correct footer display*/
 html, body {
-  height:100%;
-  font-family: Verdana;
-}
-
-/*To make title clickable*/
-#title_guide{
-  text-decoration: none;
-  color:white;
-  font-size: 1em;
-}
-
-/* Style the body */
-body {
+  height:100%;      /*Necessary for correct footer display*/
   font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
   display: flex;
   flex-direction: column;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
@@ -34,7 +24,37 @@ textarea {
   resize: none;
 }
 
-/* Header/logo Title */
+h1 {
+  padding-left: 1%;
+  padding-bottom: 2%;
+  padding-top: 2%;
+}
+
+h3 {
+    padding-bottom:2%;
+    padding-top: 2%;
+    padding-left: 1%;
+}
+
+p {
+  padding-bottom: 1%;
+   line-height: 1.8;
+}
+
+li {
+  padding-bottom: 0.5%;
+}
+
+.sombreado{
+  -webkit-box-shadow: 0px 0px 6px -1px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 6px -1px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 6px -1px rgba(0,0,0,0.75);
+}
+/*    //  GENERAL RULES */
+
+
+
+/* Header */
 .header {
   padding: 60px;
   text-align: center;
@@ -43,7 +63,6 @@ textarea {
   z-index: 2;
 }
 
-/* Increase the font size of the heading */
 .header h1 {
   font-size: 60px;
 }
@@ -52,11 +71,17 @@ textarea {
   padding: 20px;
 }
 
-.sombreado{
-  -webkit-box-shadow: 0px 0px 6px -1px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px 0px 6px -1px rgba(0,0,0,0.75);
-  box-shadow: 0px 0px 6px -1px rgba(0,0,0,0.75);
+#title_guide{              /*To make title clickable*/
+  text-decoration: none;
+  color:white;
+  font-size: 1em;
 }
+/*   //  Header */
+
+
+
+
+
 
 /* Column container */
 .center {
@@ -68,8 +93,9 @@ textarea {
   min-height: 80%;
 }
 
-/* Create two unequal columns that sits next to each other */
-/* Sidebar/left column */
+
+
+/*MENU*/
 .menu {
   -ms-flex: 10%; /* Para que funcione en Internet Explorer 10 */
   flex: 10%;
@@ -78,40 +104,6 @@ textarea {
   max-width: 400px;
   z-index: 1;
 }
-
-/* Main column */
-.content {
-  -ms-flex: 70%; /* Para que funcione en Internet Explorer 10 */
-  flex: 70%;
-  background-color: white;
-  padding: 20px;
-
-}
-
-.content p{
-	padding-left: 1%;
-}
-
-.content ul, ol{
-  padding-left: 4%;
-}
-
-.content a {
-  color: #dfb43d;
-}
-
-h1{
-  padding-left: 1%;
-}
-
-h3{
-    padding-bottom:2%;
-    padding-top: 2%;
-    padding-left: 1%;
-}
-
-
-/*MENU*/
 
 .menulink{
   color: black;
@@ -138,7 +130,7 @@ h3{
   text-decoration: none;
   width: 100%;
   text-align: center;
-  transition: 0.7s;
+
 }
 .menu li a:hover {
   background-color: #555;
@@ -148,19 +140,38 @@ h3{
 }
 /*END MENU*/
 
-h1{
-  padding-bottom: 2%;
-  padding-top: 2%;
+
+
+/* Main content column */
+.content {
+  -ms-flex: 70%; /* Para que funcione en Internet Explorer 10 */
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+
 }
 
-p {
-  padding-bottom: 1%;
-   line-height: 1.8;
+.content p{
+	padding-left: 1%;
 }
 
-li{
-  padding-bottom: 0.5%;
+.content ul, ol{
+  padding-left: 4%;
 }
+
+.content a {
+  color: #dfb43d;
+}
+
+.content li {
+  line-height: 1.8;
+}
+/*   // Main content column */
+
+
+
+
+
 
 
 
@@ -179,10 +190,18 @@ li{
 }
 
 @media only screen and (max-width: 935px){
+
+  .image-div {
+    width:200px;
+  }
+
   .image-div.right {
     float: inherit;
     display: block;
     margin: 25px auto;
+  }
+  .content-image {
+    width:200px;
   }
 }
 
@@ -197,8 +216,6 @@ li{
   box-shadow: 2px 2px 5px #999;
   margin-bottom:0.5em;
 }
-
-
 /*    //   Imágenes de los div content    */
 
 
@@ -251,43 +268,11 @@ th{
 /*TABLE*/
 
 
-.btn{
-  padding: .5rem 1rem;
-  background: #fdce4b;
-  color: #314152;
-  border: 1px solid transparent;
-  border-radius: .25rem;
-  font-weight: bold;
-}
 
-.btn-big{
-  padding: .7rem 1.3rem;
-  line-height: 1.3rem;
-  border-bottom: 5px solid #D1B358;
-  border-left: 3px solid #D1B358;
-}
 
-.btn:hover{
-  color: #314152 !important;
-  background: #e4b738;
-}
 
-.text-input {
-  padding: .7rem 1rem;
-  display: block;
-  width: 100%;
-  border-radius: 5px;
-  border: 1px solid #e0e0e0;
-  outline: none;
-  color: #444;
-  line-height: 1.5rem;
-  font-family: 'Montserrat', serif;
-  font-size: 1.1em;
-}
 
 /* FOOTER */
-
-
 .footer-content {
   background: #3e4354;
   color: #d3d3d3;
@@ -325,8 +310,6 @@ th{
 
 .footer-content #creative-commons {
   color: #fdce4b;
-
-  /*  white   #e4b738 */
 }
 
 .footer-content .links ul {
@@ -346,6 +329,10 @@ th{
   color: #d3d3d3;
   margin-left: 15px;
   transition: all .3s;
+}
+
+.footer-section.links li {
+  line-height: 2.5;
 }
 
 
@@ -372,6 +359,39 @@ th{
   font-family: 'Montserrat', serif;
 }
 
+.btn{
+  padding: .5rem 1rem;
+  background: #fdce4b;
+  color: #314152;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  font-weight: bold;
+}
+
+.btn-big{
+  padding: .7rem 1.3rem;
+  line-height: 1.3rem;
+  border-bottom: 5px solid #D1B358;
+  border-left: 3px solid #D1B358;
+}
+
+.btn:hover{
+  color: #314152 !important;
+  background: #e4b738;
+}
+
+.text-input {
+  padding: .7rem 1rem;
+  display: block;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #e0e0e0;
+  outline: none;
+  color: #444;
+  line-height: 1.5rem;
+  font-family: 'Montserrat', serif;
+  font-size: 1.1em;
+}
 
 .footer-bottom {
   background: #343a40;
@@ -446,6 +466,11 @@ th{
   .footer-bottom {
     height: auto;
   }
+
+
+  .footer-section.links li {
+    line-height: 1.8;
+  }
 }
 /* // FOOTER */
 
@@ -464,5 +489,15 @@ th{
   }
   .menu {
     max-width: initial;
+  }
+
+  .header h1 {
+    font-size: 40px;
+  }
+
+  .header h3 {
+    font-size: 15px;
+    font-weight: normal;
+    padding: 10px;
   }
 }

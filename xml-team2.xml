@@ -4,328 +4,425 @@
 
 <root>
 	<tags>
-		<tag>
-			<name>html</name>
-			<definition>The &lt;html&gt; element is the root element of an HTML page.</definition>
-			<attributes>
-				<attribute>
-					<attribute_name>xmlns</attribute_name>
-					<attribute_definition>It specifies the XML namespace attribute (if you need your content to conform to XHTML).</attribute_definition>
-				</attribute>
-			</attributes>
-			<examples>
-				<example>&lt;!DOCTYPE HTML&gt;
-				&lt;html&gt;
-					&lt;head&gt;
-						&lt;title&gt;Title of the document&lt;/title&gt;
-					&lt;/head&gt;
-					&lt;body&gt;
-						The content of the document......
-					&lt;/body&gt;
-				&lt;/html&gt;</example>
-				<example>html_example.png</example>
-			</examples>
-		</tag>
-		<tag>
-			<name>head</name>
-			<definition>The &lt;head&gt; element is a container for metadata (data about data) and is placed between the &lt;html&gt; tag and the &lt;body&gt; tag. Metadata is not displayed.</definition>
-			<examples>
-				<example>&lt;!doctype html&gt;
+		<type name="document">
+			<tag>
+				<name>html</name>
+				<definition>The &lt;html&gt; element is the root element of an HTML page.</definition>
+				<attributes>
+					<attribute>
+						<attribute_name>xmlns</attribute_name>
+						<attribute_definition>It specifies the XML namespace attribute (if you need your content to conform to XHTML).</attribute_definition>
+					</attribute>
+				</attributes>
+				<examples>
+					<codeexamples>
+					<example>&lt;!DOCTYPE HTML&gt;
 					&lt;html&gt;
 						&lt;head&gt;
-							&lt;link rel="stylesheet" type="text/css" href="theme.css"&gt;
-						&lt;/head&gt;
-					&lt;/html&gt;</example>
-				<example>table_example.png</example>
-			</examples>
-		</tag>
-		<tag>
-			<name>title</name>
-			<definition>The &lt;title&gt; tag is required in all HTML documents - there can only exist one - and it defines the title of the document. This title is shown in the browser toolbar, in search-engine results and as the title for the page when it is added to favorites.</definition>
-			<attributes>
-				<attribute>
-					<attribute_name>This tag only supports the Global Attributes in HTML</attribute_name>
-				</attribute>
-			</attributes>
-			<examples>
-				<example>&lt;!doctype html&gt;
-					&lt;html&gt;
-						&lt;head&gt;
-							&lt;title&gt;Document title&lt;/title&gt;
-						&lt;/head&gt;
-					&lt;/html&gt;</example>
-				<example>title_example.png</example>
-			</examples>
-		</tag>
-		<tag>
-			<name>style</name>
-			<definition>The &lt;style&gt; tag is used to configure the style of an HTML element. Each HTML document can contain multiple &lt;style&gt; tags.</definition>
-			<attributes>
-				<attribute>
-					<attribute_name>media</attribute_name>
-					<attribute_definition>Specifies what media/device the media resource is optimized for.</attribute_definition>
-				</attribute>
-				<attribute>
-					<attribute_name>text/css</attribute_name>
-					<attribute_definition>Specifies the media type of the &lt;style&gt; tag</attribute_definition>
-				</attribute>
-			</attributes>
-			<examples>
-				<example>&lt;!doctype html&gt;
-					&lt;html&gt;
-						&lt;head&gt;
-							&lt;style&gt;h1 {color:red;} p {color:blue;}&lt;/style&gt;
-						&lt;/head&gt;
-					&lt;/html&gt;</example>
-				<example>style_example.png</example>
-			</examples>
-		</tag>
-		<tag>
-			<name>link</name>
-			<definition>The &lt;link&gt; tag defines a link between a document and an external resource. It is used to link to external style sheets.</definition>
-			<attributes>
-				<attribute>
-					<attribute_name>href</attribute_name>
-					<attribute_definition>This attribute specifies the URL of the linked resource. The URL must be absolute or relative.</attribute_definition>
-				</attribute>
-				<attribute>
-					<attribute_name>rel</attribute_name>
-					<attribute_definition>Specifies the relationship between the current document and the linked document.</attribute_definition>
-				</attribute>
-				<attribute>
-					<attribute_name>media</attribute_name>
-					<attribute_definition>Specifies on what device the linked document will be displayed.</attribute_definition>
-				</attribute>
-				<attribute>
-					<attribute_name>type</attribute_name>
-					<attribute_definition>Specifies the media type of the linked document.</attribute_definition>
-				</attribute>
-			</attributes>
-			<examples>
-				<example>&lt;link rel="stylesheet" type="text/css" href="theme.css"&gt;</example>
-				<example>link_example.png</example>
-			</examples>
-		</tag>
-		<tag>
-	 	 <name>script</name>
-	 	 <definition>The &lt;script&gt; tag is used to define a client-side script (JavaScript).The &lt;script&gt; element either contains scripting statements, or it points to an external script file through the src attribute.</definition>
-	 	 <attributes>
-	 		 <attribute>
-	 			 <attribute_name>async</attribute_name>
-	 			 <attribute_definition>Specifies that the script is executed asynchronously (only for external scripts).</attribute_definition>
-	 		 </attribute>
-	 		 <attribute>
-	 			 <attribute_name>charset</attribute_name>
-	 			 <attribute_definition>Specifies the character encoding used in an external script file.</attribute_definition>
-	 		 </attribute>
-	 		 <attribute>
-	 			 <attribute_name>defer</attribute_name>
-	 			 <attribute_definition>Specifies that the script is executed when the page has finished parsing (only for external scripts).</attribute_definition>
-	 		 </attribute>
-	 		 <attribute>
-	 			 <attribute_name>src</attribute_name>
-	 			 <attribute_definition>Specifies the URL of an external script file.</attribute_definition>
-	 		 </attribute>
-	 		 <attribute>
-	 			 <attribute_name>type</attribute_name>
-	 			 <attribute_definition>Specifies the media type of the script.</attribute_definition>
-	 		 </attribute>
-	 		 <attribute>
-	 			 <attribute_name>xml:space</attribute_name>
-	 			 <attribute_definition>Specifies whether whitespace in code should be preserved.</attribute_definition>
-	 		 </attribute>
-	 	 </attributes>
-	 	 <examples>
-	 		 <example>&lt;script&gt;
-	 				 alert("Hello World!");
-	 			 &lt;/script&gt;</example>
-	 		 <example>&lt;!DOCTYPE html&gt;
-	 			 &lt;html&gt;
-	 			 &lt;body&gt;
-	 			 &lt;h1&gt;The script element&lt;/h1&gt;
-	 			 &lt;p id="demo"&gt;&lt;/p&gt;
-	 			 &lt;script&gt;
-	 			 document.getElementById("demo").innerHTML = "Hello JavaScript!";
-	 			 &lt;/script&gt;
-	 			 &lt;/body&gt;
-	 			 &lt;/html&gt;</example>
-				 <example>script_example.png</example>
-	 	 </examples>
-	  </tag>
-		<tag>
-			<name>body</name>
-			<definition>The &lt;body&gt; tag defines the document's body. It contains all the contents of an HTML document, such as text, hyperlinks, images, tables, lists, etc.</definition>
-			<attributes>
-				<attribute>
-					<attribute_name>This tag only supports global and event attributes in HTML.</attribute_name>
-				</attribute>
-			</attributes>
-			<examples>
-				<example>&lt;!doctype html&gt;
-					&lt;html&gt;
-						&lt;head&gt;
-							&lt;title&gt;Document title&lt;/title&gt;
+							&lt;title&gt;Title of the document&lt;/title&gt;
 						&lt;/head&gt;
 						&lt;body&gt;
-							The content of the document has to go inside the body.
+							The content of the document......
 						&lt;/body&gt;
 					&lt;/html&gt;</example>
-				<example>body_example.png</example>
-			</examples>
-		</tag>
-		<tag>
-			<name>h1</name>
-			<definition>The &lt;h1&gt; to &lt;h6&gt; element tags are used to define HTML headings. &lt;h1&gt; defines the most important heading. &lt;h6&gt; defines the least important heading.</definition>
-			<attributes>
-				<attribute>
-					<attribute_name>This tag only supports global and event attributes in HTML.</attribute_name>
-				</attribute>
-			</attributes>
-			<examples>
-				<example>&lt;h1&gt;I'm the biggest heading&lt;/h1&gt;</example>
-				<example>&lt;h3&gt;I'm a smaller heading&lt;/h3&gt;</example>
-				<example>h1_example.png</example>
-			</examples>
-		</tag>
-		<tag>
-			<name>p</name>
-			<definition>The &lt;p&gt; element defines a paragraph.</definition>
-			<attributes>
-				<attribute>
-					<attribute_name>This tag only supports global and event attributes in HTML.</attribute_name>
-				</attribute>
-			</attributes>
-			<examples>
-				<example>&lt;p&gt;New paragraph.&lt;/p&gt;</example>
-			</examples>
-		</tag>
-		<tag>
-			<name>strong</name>
-			<definition>The &lt;strong&gt; element is appropriate to mark with special emphasis the most important parts of a text.</definition>
-			<attributes>
-				<attribute>
-					<attribute_name>This tag only supports global and event attributes in HTML.</attribute_name>
-				</attribute>
-			</attributes>
-			<examples>
-				<example>&lt;strong&gt;Hey Joe &lt;/strong &gt;</example>
-				<example>strong_example.png</example>
-			</examples>
-		</tag>
-		<tag>
-		    <name>ul</name>
-		    <definition>An unordered list starts with the &lt;ul&gt; tag.</definition>
-		    <attributes>
-		      <attribute>
-		        <attribute_name>This tag only supports global and event attributes in HTML.</attribute_name>
-		      </attribute>
-		    </attributes>
-		    <examples>
-		      <example>&lt;ul&gt;
-		         &lt;li&gt; Coffee &lt;/li&gt;
-		         &lt;li&gt; Tea &lt;/li&gt;
-		         &lt;li&gt; Milk &lt;/li&gt;
-		       &lt;/ul&gt;</example>
-				<example>ul_example.png</example>
-		    </examples>
-		  </tag>
-		  <tag>
-		    <name>ol</name>
-		    <definition>An ordered list starts with the &lt;ol&gt; tag.</definition>
-		    <attributes>
-		      <attribute>
-		        <attribute_name>reversed</attribute_name>
-		        <attribute_definition>Specifies that the list order should be descending (9,8,7...).</attribute_definition>
-		      </attribute>
+					</codeexamples>
+					<imageexamples>
+					<image>images/tag-examples/html_example.png</image>
+					</imageexamples>
+				</examples>
+			</tag>
+			<tag>
+				<name>head</name>
+				<definition>The &lt;head&gt; element is a container for metadata (data about data) and is placed between the &lt;html&gt; tag and the &lt;body&gt; tag. Metadata is not displayed.</definition>
+				<examples>
+					<codeexamples>
+						<example>&lt;!doctype html&gt;
+							&lt;html&gt;
+								&lt;head&gt;
+									&lt;link rel="stylesheet" type="text/css" href="theme.css"&gt;
+								&lt;/head&gt;
+							&lt;/html&gt;
+						</example>
+					</codeexamples>
+					<imageexamples>
+					<image>images/tag-examples/head_example.png</image>
+					</imageexamples>
+				</examples>
+			</tag>
+			<tag>
+				<name>body</name>
+				<definition>The &lt;body&gt; tag defines the document's body. It contains all the contents of an HTML document, such as text, hyperlinks, images, tables, lists, etc.</definition>
+				<attributes>
 					<attribute>
-		        <attribute_name>start</attribute_name>
-		        <attribute_definition>Specifies the start value of an ordered list.</attribute_definition>
-		      </attribute>
+						<attribute_name>This tag only supports global and event attributes in HTML.</attribute_name>
+					</attribute>
+				</attributes>
+				<examples>
+					<codeexamples>
+						<example>&lt;!doctype html&gt;
+							&lt;html&gt;
+								&lt;head&gt;
+									&lt;title&gt;Document title&lt;/title&gt;
+								&lt;/head&gt;
+								&lt;body&gt;
+									The content of the document has to go inside the body.
+								&lt;/body&gt;
+							&lt;/html&gt;</example>
+					</codeexamples>
+					<imageexamples>
+					<image>images/tag-examples/body_example.png</image>
+					</imageexamples>
+				</examples>
+			</tag>
+		</type>
+
+		<type name="head">
+			<tag>
+				<name>title</name>
+				<definition>The &lt;title&gt; tag is required in all HTML documents - there can only exist one - and it defines the title of the document. This title is shown in the browser toolbar, in search-engine results and as the title for the page when it is added to favorites.</definition>
+				<attributes>
 					<attribute>
-		        <attribute_name>type</attribute_name>
-		        <attribute_definition>Specifies the kind of marker to use in the list.</attribute_definition>
-		      </attribute>
-		    </attributes>
-		    <examples>
-		      <example>&lt;ol type="A"&gt;
-		         &lt;li&gt; Coffee&lt;/li&gt;
-		         &lt;li&gt; Tea &lt;/li&gt;
-		         &lt;li&gt; Milk &lt;/li&gt;
-		       &lt;/ol&gt;</example>
-				 <example>ol_example.png</example>
-		    </examples>
-		  </tag>
-		  <tag>
-		    <name>li</name>
-		    <definition>Each list item starts with the &lt;li&gt; tag.</definition>
-		    <attributes>
-		      <attribute>
-		        <attribute_name>This tag only supports global and event attributes in HTML.</attribute_name>
-		      </attribute>
-		    </attributes>
-		    <examples>
-		      <example>&lt;ol type="A"&gt;
-		          &lt;li&gt; Coffee&lt;/li&gt;
-		          &lt;li&gt; Tea &lt;/li&gt;
-		          &lt;li&gt; Milk &lt;/li&gt;
-		        &lt;/ol&gt;</example>
-				 <example>li_example.png</example>
-		    </examples>
-		  </tag>
-		  <tag>
-		    <name>dl</name>
-		    <definition>The &lt;dl&gt; tag defines a description list.</definition>
-		    <attributes>
-		      <attribute>
-		        <attribute_name>This tag only supports global and event attributes in HTML.</attribute_name>
-		      </attribute>
-		    </attributes>
-		    <examples>
-		      <example>&lt;dl&gt;
-		         &lt;dt&gt;Coffee&lt;/dt&gt;
-		         &lt;dd&gt;- black hot drink&lt;/dd&gt;
-		         &lt;dt&gt;Milk&lt;/dt&gt;
-		         &lt;dd&gt;- white cold drink&lt;/dd&gt;
-		       &lt;/dl&gt;</example>
-				 <example>dl_example.png</example>
-		    </examples>
-		  </tag>
-		  <tag>
-		    <name>dt</name>
-		    <definition>The &lt;dt&gt;tag defines a term (name).</definition>
-		    <attributes>
-		      <attribute>
-		        <attribute_name>This tag only supports global and event attributes in HTML.</attribute_name>
-		      </attribute>
-		    </attributes>
-		    <examples>
-		      <example>&lt;dl&gt;
-		         &lt;dt&gt;Coffee&lt;/dt&gt;
-		         &lt;dd&gt;- black hot drink&lt;/dd&gt;
-		         &lt;dt&gt;Milk&lt;/dt&gt;
-		         &lt;dd&gt;- white cold drink&lt;/dd&gt;
-		       &lt;/dl&gt;</example>
-					<example>dt_example.png</example>
-		    </examples>
-		  </tag>
-		  <tag>
-		    <name>dd</name>
-		    <definition>The &lt;dd&gt; tag describes each term.</definition>
-		    <attributes>
-		      <attribute>
-		        <attribute_name>This tag only supports global and event attributes in HTML.</attribute_name>
-		      </attribute>
-		    </attributes>
-		    <examples>
-		      <example>&lt;dl&gt;
-		         &lt;dt&gt;Coffee&lt;/dt&gt;
-		         &lt;dd&gt;- black hot drink&lt;/dd&gt;
-		         &lt;dt&gt;Milk&lt;/dt&gt;
-		         &lt;dd&gt;- white cold drink&lt;/dd&gt;
-		       &lt;/dl&gt;</example>
-					<example>dd_example.png</example>
-		    </examples>
-		  </tag>
+						<attribute_name>This tag only supports the Global Attributes in HTML</attribute_name>
+					</attribute>
+				</attributes>
+				<examples>
+					<codeexamples>
+						<example>&lt;!doctype html&gt;
+							&lt;html&gt;
+								&lt;head&gt;
+									&lt;title&gt;Document title&lt;/title&gt;
+								&lt;/head&gt;
+							&lt;/html&gt;</example>
+					</codeexamples>
+					<imageexamples>
+					<image>images/tag-examples/title_example.png</image>
+					</imageexamples>
+				</examples>
+			</tag>
+			<tag>
+				<name>style</name>
+				<definition>The &lt;style&gt; tag is used to configure the style of an HTML element. Each HTML document can contain multiple &lt;style&gt; tags.</definition>
+				<attributes>
+					<attribute>
+						<attribute_name>media</attribute_name>
+						<attribute_definition>Specifies what media/device the media resource is optimized for.</attribute_definition>
+					</attribute>
+					<attribute>
+						<attribute_name>text/css</attribute_name>
+						<attribute_definition>Specifies the media type of the &lt;style&gt; tag</attribute_definition>
+					</attribute>
+				</attributes>
+				<examples>
+					<codeexamples>
+						<example>&lt;!doctype html&gt;
+							&lt;html&gt;
+								&lt;head&gt;
+									&lt;style&gt;h1 {color:red;} p {color:blue;}&lt;/style&gt;
+								&lt;/head&gt;
+							&lt;/html&gt;</example>
+					</codeexamples>
+					<imageexamples>
+					<image>images/tag-examples/style_example.png</image>
+					</imageexamples>
+				</examples>
+			</tag>
+			<tag>
+				<name>link</name>
+				<definition>The &lt;link&gt; tag defines a link between a document and an external resource. It is used to link to external style sheets.</definition>
+				<attributes>
+					<attribute>
+						<attribute_name>href</attribute_name>
+						<attribute_definition>This attribute specifies the URL of the linked resource. The URL must be absolute or relative.</attribute_definition>
+					</attribute>
+					<attribute>
+						<attribute_name>rel</attribute_name>
+						<attribute_definition>Specifies the relationship between the current document and the linked document.</attribute_definition>
+					</attribute>
+					<attribute>
+						<attribute_name>media</attribute_name>
+						<attribute_definition>Specifies on what device the linked document will be displayed.</attribute_definition>
+					</attribute>
+					<attribute>
+						<attribute_name>type</attribute_name>
+						<attribute_definition>Specifies the media type of the linked document.</attribute_definition>
+					</attribute>
+				</attributes>
+				<examples>
+					<codeexamples>
+						<example>&lt;link rel="stylesheet" type="text/css" href="theme.css"&gt;</example>
+					</codeexamples>
+					<imageexamples>
+					<image>images/tag-examples/link_example.png</image>
+					</imageexamples>
+				</examples>
+			</tag>
+			<tag>
+			 <name>script</name>
+			 <definition>The &lt;script&gt; tag is used to define a client-side script (JavaScript).The &lt;script&gt; element either contains scripting statements, or it points to an external script file through the src attribute.</definition>
+			 <attributes>
+				 <attribute>
+					 <attribute_name>async</attribute_name>
+					 <attribute_definition>Specifies that the script is executed asynchronously (only for external scripts).</attribute_definition>
+				 </attribute>
+				 <attribute>
+					 <attribute_name>charset</attribute_name>
+					 <attribute_definition>Specifies the character encoding used in an external script file.</attribute_definition>
+				 </attribute>
+				 <attribute>
+					 <attribute_name>defer</attribute_name>
+					 <attribute_definition>Specifies that the script is executed when the page has finished parsing (only for external scripts).</attribute_definition>
+				 </attribute>
+				 <attribute>
+					 <attribute_name>src</attribute_name>
+					 <attribute_definition>Specifies the URL of an external script file.</attribute_definition>
+				 </attribute>
+				 <attribute>
+					 <attribute_name>type</attribute_name>
+					 <attribute_definition>Specifies the media type of the script.</attribute_definition>
+				 </attribute>
+				 <attribute>
+					 <attribute_name>xml:space</attribute_name>
+					 <attribute_definition>Specifies whether whitespace in code should be preserved.</attribute_definition>
+				 </attribute>
+			 </attributes>
+			 <examples>
+				 <codeexamples>
+					 <example>&lt;script&gt;
+							 alert("Hello World!");
+						 &lt;/script&gt;</example>
+					 <example>&lt;!DOCTYPE html&gt;
+						 &lt;html&gt;
+						 &lt;body&gt;
+						 &lt;h1&gt;The script element&lt;/h1&gt;
+						 &lt;p id="demo"&gt;&lt;/p&gt;
+						 &lt;script&gt;
+						 document.getElementById("demo").innerHTML = "Hello JavaScript!";
+						 &lt;/script&gt;
+						 &lt;/body&gt;
+						 &lt;/html&gt;</example>
+				 </codeexamples>
+				 <imageexamples>
+				 <image>images/tag-examples/script_example.png</image>
+				 </imageexamples>
+			 </examples>
+			</tag>
+		</type>
+
+		<type name="list">
+			<tag>
+			    <name>ul</name>
+			    <definition>An unordered list starts with the &lt;ul&gt; tag.</definition>
+			    <attributes>
+			      <attribute>
+			        <attribute_name>This tag only supports global and event attributes in HTML.</attribute_name>
+			      </attribute>
+			    </attributes>
+			    <examples>
+						<codeexamples>
+							<example>&lt;ul&gt;
+				         &lt;li&gt; Coffee &lt;/li&gt;
+				         &lt;li&gt; Tea &lt;/li&gt;
+				         &lt;li&gt; Milk &lt;/li&gt;
+				       &lt;/ul&gt;</example>
+						</codeexamples>
+						<imageexamples>
+						<image>images/tag-examples/ul_example.png</image>
+						</imageexamples>
+			    </examples>
+			  </tag>
+			  <tag>
+			    <name>ol</name>
+			    <definition>An ordered list starts with the &lt;ol&gt; tag.</definition>
+			    <attributes>
+			      <attribute>
+			        <attribute_name>reversed</attribute_name>
+			        <attribute_definition>Specifies that the list order should be descending (9,8,7...).</attribute_definition>
+			      </attribute>
+						<attribute>
+			        <attribute_name>start</attribute_name>
+			        <attribute_definition>Specifies the start value of an ordered list.</attribute_definition>
+			      </attribute>
+						<attribute>
+			        <attribute_name>type</attribute_name>
+			        <attribute_definition>Specifies the kind of marker to use in the list.</attribute_definition>
+			      </attribute>
+			    </attributes>
+			    <examples>
+						<codeexamples>
+							<example>&lt;ol type="A"&gt;
+				         &lt;li&gt; Coffee&lt;/li&gt;
+				         &lt;li&gt; Tea &lt;/li&gt;
+				         &lt;li&gt; Milk &lt;/li&gt;
+				       &lt;/ol&gt;</example>
+						</codeexamples>
+						<imageexamples>
+						<image>images/tag-examples/ol_example.png</image>
+						</imageexamples>
+			    </examples>
+			  </tag>
+			  <tag>
+			    <name>li</name>
+			    <definition>Each list item starts with the &lt;li&gt; tag.</definition>
+			    <attributes>
+			      <attribute>
+			        <attribute_name>This tag only supports global and event attributes in HTML.</attribute_name>
+			      </attribute>
+			    </attributes>
+			    <examples>
+						<codeexamples>
+							<example>&lt;ol type="A"&gt;
+				          &lt;li&gt; Coffee&lt;/li&gt;
+				          &lt;li&gt; Tea &lt;/li&gt;
+				          &lt;li&gt; Milk &lt;/li&gt;
+				        &lt;/ol&gt;</example>
+						</codeexamples>
+						<imageexamples>
+						<image>images/tag-examples/li_example.png</image>
+						</imageexamples>
+			    </examples>
+			  </tag>
+			  <tag>
+			    <name>dl</name>
+			    <definition>The &lt;dl&gt; tag defines a description list.</definition>
+			    <attributes>
+			      <attribute>
+			        <attribute_name>This tag only supports global and event attributes in HTML.</attribute_name>
+			      </attribute>
+			    </attributes>
+			    <examples>
+						<codeexamples>
+							<example>&lt;dl&gt;
+				         &lt;dt&gt;Coffee&lt;/dt&gt;
+				         &lt;dd&gt;- black hot drink&lt;/dd&gt;
+				         &lt;dt&gt;Milk&lt;/dt&gt;
+				         &lt;dd&gt;- white cold drink&lt;/dd&gt;
+				       &lt;/dl&gt;</example>
+						</codeexamples>
+						<imageexamples>
+						<image>images/tag-examples/dl_example.png</image>
+						</imageexamples>
+			    </examples>
+			  </tag>
+			  <tag>
+			    <name>dt</name>
+			    <definition>The &lt;dt&gt;tag defines a term (name).</definition>
+			    <attributes>
+			      <attribute>
+			        <attribute_name>This tag only supports global and event attributes in HTML.</attribute_name>
+			      </attribute>
+			    </attributes>
+			    <examples>
+						<codeexamples>
+							<example>&lt;dl&gt;
+				         &lt;dt&gt;Coffee&lt;/dt&gt;
+				         &lt;dd&gt;- black hot drink&lt;/dd&gt;
+				         &lt;dt&gt;Milk&lt;/dt&gt;
+				         &lt;dd&gt;- white cold drink&lt;/dd&gt;
+				       &lt;/dl&gt;</example>
+						</codeexamples>
+						<imageexamples>
+						<image>images/tag-examples/dt_example.png</image>
+						</imageexamples>
+			    </examples>
+			  </tag>
+			  <tag>
+			    <name>dd</name>
+			    <definition>The &lt;dd&gt; tag describes each term.</definition>
+			    <attributes>
+			      <attribute>
+			        <attribute_name>This tag only supports global and event attributes in HTML.</attribute_name>
+			      </attribute>
+			    </attributes>
+			    <examples>
+						<codeexamples>
+							<example>&lt;dl&gt;
+				         &lt;dt&gt;Coffee&lt;/dt&gt;
+				         &lt;dd&gt;- black hot drink&lt;/dd&gt;
+				         &lt;dt&gt;Milk&lt;/dt&gt;
+				         &lt;dd&gt;- white cold drink&lt;/dd&gt;
+				       &lt;/dl&gt;</example>
+						</codeexamples>
+						<imageexamples>
+						<image>images/tag-examples/dd_example.png</image>
+						</imageexamples>
+			    </examples>
+			  </tag>
+		</type>
+
+		<type name="text">
+			<tag>
+				<name>h1</name>
+				<definition>The &lt;h1&gt; to &lt;h6&gt; element tags are used to define HTML headings. &lt;h1&gt; defines the most important heading. &lt;h6&gt; defines the least important heading.</definition>
+				<attributes>
+					<attribute>
+						<attribute_name>This tag only supports global and event attributes in HTML.</attribute_name>
+					</attribute>
+				</attributes>
+				<examples>
+					<codeexamples>
+						<example>&lt;h1&gt;I'm the biggest heading&lt;/h1&gt;</example>
+						<example>&lt;h3&gt;I'm a smaller heading&lt;/h3&gt;</example>
+					</codeexamples>
+					<imageexamples>
+					<image>images/tag-examples/h1_example.png</image>
+					</imageexamples>
+				</examples>
+			</tag>
+			<tag>
+				<name>p</name>
+				<definition>The &lt;p&gt; element defines a paragraph.</definition>
+				<attributes>
+					<attribute>
+						<attribute_name>This tag only supports global and event attributes in HTML.</attribute_name>
+					</attribute>
+				</attributes>
+				<examples>
+					<codeexamples>
+						<example>&lt;p&gt;New paragraph.&lt;/p&gt;</example>
+					</codeexamples>
+					<imageexamples>
+					<image>images/tag-examples/p_example.png</image>
+					</imageexamples>
+				</examples>
+			</tag>
+			<tag>
+				<name>strong</name>
+				<definition>The &lt;strong&gt; element is appropriate to mark with special emphasis the most important parts of a text.</definition>
+				<attributes>
+					<attribute>
+						<attribute_name>This tag only supports global and event attributes in HTML.</attribute_name>
+					</attribute>
+				</attributes>
+				<examples>
+					<codeexamples>
+						<example>&lt;strong&gt;Hey Joe &lt;/strong &gt;</example>
+					</codeexamples>
+					<imageexamples>
+					<image>images/tag-examples/strong_example.png</image>
+					</imageexamples>
+				</examples>
+			</tag>
+			<tag>
+			 <name>br</name>
+			 <definition>The &lt;br&gt; tag inserts a single line break.</definition>
+			 <attributes>
+				 <attribute>
+					 <attribute_name>This tag only supports global and event attributes in HTML.</attribute_name>
+				 </attribute>
+			 </attributes>
+			 <examples>
+				 <codeexamples>
+					 <example>&lt;p&gt;To force&lt;br&gt; line breaks&lt;br&gt; in a text,&lt;br&gt; use the br&lt;br&gt; element.&lt;/p&gt;</example>
+				 </codeexamples>
+				 <imageexamples>
+				 <image>images/tag-examples/br_example.png</image>
+				 </imageexamples>
+			 </examples>
+			</tag>
+		</type>
+
+
+		<type name="table">
 			<tag>
 				<name>table</name>
 				<definition>An HTML table is defined with the &lt;table&gt; tag.</definition>
@@ -335,24 +432,28 @@
 					</attribute>
 				</attributes>
 				<examples>
-					<example>&lt;table style="width:100%"&gt;
-							&lt;tr&gt;
-								&lt;th&gt;Firstname&lt;/th&gt;
-								&lt;th&gt;Lastname&lt;/th&gt;
-								&lt;th&gt;Age&lt;/th&gt;
-							&lt;/tr&gt;
-							&lt;tr&gt;
-								&lt;td&gt;Jill&lt;/td&gt;
-								&lt;td&gt;Smith&lt;/td&gt;
-								&lt;td&gt;50&lt;/td&gt;
-							&lt;/tr&gt;
-							&lt;tr&gt;
-								&lt;td&gt;Eve&lt;/td&gt;
-								&lt;td&gt;Jackson&lt;/td&gt;
-								&lt;td&gt;94&lt;/td&gt;
-							&lt;/tr&gt;
-						&lt;/table&gt;</example>
-					 <example>table_example.png</example>
+					<codeexamples>
+						<example>&lt;table style="width:100%"&gt;
+  							&lt;tr&gt;
+  								&lt;th&gt;Firstname&lt;/th&gt;
+  								&lt;th&gt;Lastname&lt;/th&gt;
+  								&lt;th&gt;Age&lt;/th&gt;
+  							&lt;/tr&gt;
+  							&lt;tr&gt;
+  								&lt;td&gt;Jill&lt;/td&gt;
+  								&lt;td&gt;Smith&lt;/td&gt;
+  								&lt;td&gt;50&lt;/td&gt;
+  							&lt;/tr&gt;
+  							&lt;tr&gt;
+  								&lt;td&gt;Eve&lt;/td&gt;
+  								&lt;td&gt;Jackson&lt;/td&gt;
+  								&lt;td&gt;94&lt;/td&gt;
+  							&lt;/tr&gt;
+  						&lt;/table&gt;</example>
+ 				 </codeexamples>
+ 				 <imageexamples>
+ 				 <image>images/tag-examples/table_example.png</image>
+ 				 </imageexamples>
 				</examples>
 			</tag>
 			 <tag>
@@ -364,20 +465,24 @@
 					 </attribute>
 				 </attributes>
 				 <examples>
-					 <example>&lt;table style="width:100%"&gt;
-							&lt;tr&gt;
-								&lt;th&gt;Name:&lt;/th&gt;
-								&lt;td&gt;Bill Gates&lt;/td&gt;
-							&lt;/tr&gt;
-							&lt;tr&gt;
-								&lt;th rowspan="2"&gt;Telephone:&lt;/th&gt;
-								&lt;td&gt;55577854&lt;/td&gt;
-							&lt;/tr&gt;
-							&lt;tr&gt;
-								&lt;td&gt;55577855&lt;/td&gt;
-							&lt;/tr&gt;
-						&lt;/table&gt;</example>
-					 <example>tr_example.png</example>
+					 <codeexamples>
+						 <example>&lt;table style="width:100%"&gt;
+								&lt;tr&gt;
+									&lt;th&gt;Name:&lt;/th&gt;
+									&lt;td&gt;Bill Gates&lt;/td&gt;
+								&lt;/tr&gt;
+								&lt;tr&gt;
+									&lt;th rowspan="2"&gt;Telephone:&lt;/th&gt;
+									&lt;td&gt;55577854&lt;/td&gt;
+								&lt;/tr&gt;
+								&lt;tr&gt;
+									&lt;td&gt;55577855&lt;/td&gt;
+								&lt;/tr&gt;
+							&lt;/table&gt;</example>
+					 </codeexamples>
+					 <imageexamples>
+					 <image>images/tag-examples/tr_example.png</image>
+					 </imageexamples>
 				 </examples>
 			 </tag>
 			 <tag>
@@ -398,18 +503,22 @@
 					 </attribute>
 				 </attributes>
 				 <examples>
-					 <example>&lt;table style="width:100%"&gt;
-								&lt;tr&gt;
-									&lt;th&gt;Name&lt;/th&gt;
-									&lt;th colspan="2"&gt;Telephone&lt;/th&gt;
-								&lt;/tr&gt;
-								&lt;tr&gt;
-									&lt;td&gt;Bill Gates&lt;/td&gt;
-									&lt;td&gt;55577854&lt;/td&gt;
-									&lt;td&gt;55577855&lt;/td&gt;
-								&lt;/tr&gt;
-							&lt;/table&gt;</example>
-					 <example>th_example.png</example>
+					 <codeexamples>
+						 <example>&lt;table style="width:100%"&gt;
+									&lt;tr&gt;
+										&lt;th&gt;Name&lt;/th&gt;
+										&lt;th colspan="2"&gt;Telephone&lt;/th&gt;
+									&lt;/tr&gt;
+									&lt;tr&gt;
+										&lt;td&gt;Bill Gates&lt;/td&gt;
+										&lt;td&gt;55577854&lt;/td&gt;
+										&lt;td&gt;55577855&lt;/td&gt;
+									&lt;/tr&gt;
+								&lt;/table&gt;</example>
+					 </codeexamples>
+					 <imageexamples>
+					 <image>images/tag-examples/th_example.png</image>
+					 </imageexamples>
 				 </examples>
 			 </tag>
 			 <tag>
@@ -430,366 +539,427 @@
 					 </attribute>
 				 </attributes>
 				 <examples>
-					 <example>&lt;table&gt;
-							&lt;tr&gt;
-								&lt;td&gt;Cell A&lt;/td&gt;
-								&lt;td&gt;Cell B&lt;/td&gt;
-							&lt;/tr&gt;
-					 &lt;/table&gt;</example>
-					 <example>td_example.png</example>
+					 <codeexamples>
+						 <example>&lt;table&gt;
+								&lt;tr&gt;
+									&lt;td&gt;Cell A&lt;/td&gt;
+									&lt;td&gt;Cell B&lt;/td&gt;
+								&lt;/tr&gt;
+						 &lt;/table&gt;</example>
+					 </codeexamples>
+					 <imageexamples>
+					 <image>images/tag-examples/td_example.png</image>
+					 </imageexamples>
 				 </examples>
 			 </tag>
-			 <tag>
-			 	<name>a</name>
-			 	<definition>HTML links are defined with the &lt;a&gt; tag.</definition>
-			 	<attributes>
-			 		<attribute>
-			 			<attribute_name>href</attribute_name>
-			 			<attribute_definition>Specifies the URL of the page the link goes to.</attribute_definition>
-			 		</attribute>
+		</type>
+
+
+		<type name="link">
+
+						 <tag>
+						 	<name>a</name>
+						 	<definition>HTML links are defined with the &lt;a&gt; tag.</definition>
+						 	<attributes>
+						 		<attribute>
+						 			<attribute_name>href</attribute_name>
+						 			<attribute_definition>Specifies the URL of the page the link goes to.</attribute_definition>
+						 		</attribute>
+								<attribute>
+						 			<attribute_name>download</attribute_name>
+						 			<attribute_definition>Specifies that the target will be downloaded when a user clicks on the hyperlink.</attribute_definition>
+						 		</attribute>
+						 	</attributes>
+						 	<examples>
+								<codeexamples>
+		 						 <example>&lt;a href="https://www.w3schools.com"&gt;This is a link&lt;/a&gt;</example>
+		 					 </codeexamples>
+		 					 <imageexamples>
+		 					 <image>images/tag-examples/a_example.png</image>
+		 					 </imageexamples>
+						 	</examples>
+						 </tag>
+
+					<tag>
+						<name>img</name>
+						<definition>HTML images are defined with the &lt;img&gt; tag.</definition>
+						<attributes>
+							<attribute>
+								<attribute_name>src</attribute_name>
+								<attribute_definition>Specifies the image source of an image.</attribute_definition>
+							</attribute>
+							<attribute>
+								<attribute_name>alt</attribute_name>
+								<attribute_definition>Specifies an alternate text to be used, if an image cannot be displayed.</attribute_definition>
+							</attribute>
+						</attributes>
+						<examples>
+							<codeexamples>
+							 <example>&lt;img src="ejemplo.jpg" alt="ejemplo2.jpg"&gt;</example>
+						 </codeexamples>
+						 <imageexamples>
+						 <image>images/tag-examples/img_example.png</image>
+						 </imageexamples>
+					</examples>
+				</tag>
+		</type>
+
+		<type name="form">
+			<tag>
+				<name>form</name>
+				<definition>The &lt;form&gt; tag is used to create an HTML form for user input. It can contain one or more of the following form elements: &lt;input&gt;, &lt;textarea&gt;, &lt;button&gt;, &lt;select&gt;, &lt;option&gt;, &lt;optgroup&gt;, &lt;fieldset&gt;, &lt;label&gt;, &lt;output&gt;.</definition>
+				<attributes>
 					<attribute>
-			 			<attribute_name>download</attribute_name>
-			 			<attribute_definition>Specifies that the target will be downloaded when a user clicks on the hyperlink.</attribute_definition>
-			 		</attribute>
-			 	</attributes>
-			 	<examples>
-			 		<example>&lt;a href="https://www.w3schools.com"&gt;This is a link&lt;/a&gt;</example>
-			 		<example>a_example.png</example>
-			 	</examples>
-			 </tag>
-			 <tag>
-			 	<name>br</name>
-			 	<definition>The &lt;br&gt; tag inserts a single line break.</definition>
-			 	<attributes>
-			 		<attribute>
-			 			<attribute_name>This tag only supports global and event attributes in HTML.</attribute_name>
-			 		</attribute>
-			 	</attributes>
-			 	<examples>
-			 		<example>&lt;p&gt;To force&lt;br&gt; line breaks&lt;br&gt; in a text,&lt;br&gt; use the br&lt;br&gt; element.&lt;/p&gt;</example>
-			 		<example>br_example.png</example>
-			 	</examples>
-			 </tag>
-		<tag>
-			<name>img</name>
-			<definition>HTML images are defined with the &lt;img&gt; tag.</definition>
-			<attributes>
-				<attribute>
-					<attribute_name>src</attribute_name>
-					<attribute_definition>Specifies the image source of an image.</attribute_definition>
-				</attribute>
-				<attribute>
-					<attribute_name>alt</attribute_name>
-					<attribute_definition>Specifies an alternate text to be used, if an image cannot be displayed.</attribute_definition>
-				</attribute>
-			</attributes>
-			<examples>
-				<example>&lt;img src="ejemplo.jpg" alt="ejemplo2.jpg"&gt;</example>
-				<example>img_example.png</example>
-		</examples>
-	</tag>
-	<tag>
-		<name>form</name>
-		<definition>The &lt;form&gt; tag is used to create an HTML form for user input. It can contain one or more of the following form elements: &lt;input&gt;, &lt;textarea&gt;, &lt;button&gt;, &lt;select&gt;, &lt;option&gt;, &lt;optgroup&gt;, &lt;fieldset&gt;, &lt;label&gt;, &lt;output&gt;.</definition>
-		<attributes>
-			<attribute>
-				<attribute_name>action</attribute_name>
-				<attribute_definition>It is mandatory. It contains the URL where to send the form-data when the form is submitted.</attribute_definition>
-			</attribute>
-			<attribute>
-				<attribute_name>method</attribute_name>
-				<attribute_definition>It specifies how to send form-data, either as URL variables (with method="get") or as HTTP post transaction (with method="post").</attribute_definition>
-			</attribute>
-			<attribute>
-				<attribute_name>name</attribute_name>
-				<attribute_definition>The name attribute specifies the name of a form and it is used to reference elements in a JavaScript, or to reference form data after a form is submitted.</attribute_definition>
-			</attribute>
-			<attribute>
-				<attribute_name>enctype</attribute_name>
-				<attribute_definition>The enctype attribute, which can be used only if method="post", specifies how the form-data should be encoded when submitting it to the server. This field is required as enctype="multipart/form-data" when you are using forms that have a file upload control.</attribute_definition>
-			</attribute>
-		</attributes>
-		<examples>
-			<example>&lt;form action="/action_page.php" method="get"&gt;
-						&lt;label for="fname"&gt;Name:&lt;/label&gt;
-						&lt;input type="text" id="fname" name="fname"&gt;&lt;br&gt;&lt;br&gt;
-						&lt;input type="submit" value="Submit"&gt;
-					&lt;/form></example>
-			<example>&lt;form action="http://www.example.com/my_formular.php" method="post"&gt;
-						&lt;label for="color"&gt;Write your color preference:&lt;/label&gt;
-						&lt;input type="text" id="color" name="color"&gt;&lt;br&gt;
-						&lt;input type="submit" value="Send"&gt;
-					&lt;/form></example>
-			<example>form_example.png</example>
-		</examples>
-	</tag>
-	<tag>
-		<name>input</name>
-		<definition>The &lt;input&gt; tag specifies an input field where the user can enter data. It is used within a &lt;form&gt; element to declare input controls that allow users to input data. An input field can vary in many ways, depending on the type attribute.</definition>
-		<attributes>
-			<attribute>
-				<attribute_name>name</attribute_name>
-				<attribute_definition>The name attribute specifies the name of a form and it is used to reference elements in a JavaScript, or to reference form data after a form is submitted. Only form elements with a name attribute will have their values passed when submitting a form.</attribute_definition>
-			</attribute>
-			<attribute>
-				<attribute_name>type</attribute_name>
-				<attribute_definition>The type attribute specifies the type of &lt;input&gt; element to display. The default type is text. Although not mandatory, it is good to have it.</attribute_definition>
-			</attribute>
-			<attribute>
-				<attribute_name>value</attribute_name>
-				<attribute_definition>The value attribute specifies the value of an &lt;input&gt; element. It is used differently depending on the input type. For "button", "reset", and "submit" it defines the text on the button, for "text", "password", and "hidden" it defines the initial (default) value of the input field, and for "checkbox", "radio", "image" it defines the value associated with the input (this is also the value that is sent on submit).</attribute_definition>
-			</attribute>
-			<attribute>
-				<attribute_name>size</attribute_name>
-				<attribute_definition>The size attribute specifies the visible width, in characters, of an &lt;input&gt; element.</attribute_definition>
-			</attribute>
-			<attribute>
-				<attribute_name>checked</attribute_name>
-				<attribute_definition>The checked attribute is a boolean attribute that, if present, specifies that an &lt;input&gt; element should be pre-selected (checked) when the page loads. It can be used with checkboxes and radio buttons.</attribute_definition>
-			</attribute>
-		</attributes>
-		<examples>
-			<example>&lt;form action="/action_page.php"&gt;
-					&lt;label for="fname"&gt;First name:&lt;/label&gt;
-					&lt;input type="text" id="fname" name="fname"&gt;&lt;br&gt;&lt;br&gt;
-					&lt;label for="lname"&gt;Last name:&lt;/label&gt;
-					&lt;input type="text" id="lname" name="lname"&gt;&lt;br&gt;&lt;br&gt;
-					&lt;input type="submit" value="Submit"&gt;
-				&lt;form&gt;</example>
-			<example>input_example.png</example>
-		</examples>
-	</tag>
-	<tag>
-		<name>label</name>
-		<definition>The &lt;label&gt; tag defines a label for several elements. Among its benefits we find that screen reader users will read out the label when the user is focused on the element, and also that if a user clicks the text within the &lt;label&gt; element, it toggles the input (this increases the hit area).</definition>
-		<attributes>
-			<attribute>
-				<attribute_name>for</attribute_name>
-				<attribute_definition>It specifies which form element a label is bound to. It should be equal to the id attribute of the related element to bind them together.</attribute_definition>
-			</attribute>
-		</attributes>
-		<examples>
-			<example>&lt;form action="/action_page.php"&gt;
-					&lt;label for="male"&gt;Male&lt;/label&gt;
-					&lt;input type="radio" id="male" name="gender" value="male"&gt;&lt;br&gt;
-					&lt;label for="female"&gt;Female&lt;/label&gt;
-					&lt;input type="radio" id="female" name="gender" value="female"&gt;&lt;br&gt;
-					&lt;input type="submit" value="Submit"&gt;
-				&lt;/form></example>
-			<example>label_example.png</example>
-		</examples>
-	</tag>
-	<tag>
-		<name>select</name>
-		<definition>The &lt;select&gt; element is used to create a drop-down list. It is used with &lt;option&gt; tags inside that define the available options in the list.</definition>
-		<attributes>
-			<attribute>
-				<attribute_name>multiple</attribute_name>
-				<attribute_definition>When present, it specifies that multiple options can be selected at once.</attribute_definition>
-			</attribute>
-			<attribute>
-				<attribute_name>name</attribute_name>
-				<attribute_definition>It specifies the name for a drop-down list. It is used to reference elements in a JavaScript, or to reference form data after a form is submitted.</attribute_definition>
-			</attribute>
-			<attribute>
-				<attribute_name>required</attribute_name>
-				<attribute_definition>When present, it specifies the user is required to select a value before submitting the form.</attribute_definition>
-			</attribute>
-			<attribute>
-				<attribute_name>size</attribute_name>
-				<attribute_definition>It specifies the number of visible options in a drop-down list. If greater than 1, but lower than the total number of options in the list, the browser will add a scroll bar to indicate that there are more options to view.</attribute_definition>
-			</attribute>
-		</attributes>
-		<examples>
-			<example>&lt;label for="cars"&gt;Choose a car:&lt;/label&gt;
-				&lt;select id="cars"&gt;
-					&lt;option value="volvo"&gt;Volvo&lt;/option&gt;
-					&lt;option value="saab"&gt;Saab&lt;/option&gt;
-					&lt;option value="mercedes"&gt;Mercedes&lt;/option&gt;
-					&lt;option value="audi"&gt;Audi&lt;/option&gt;
-				&lt;/select></example>
-			<example>&lt;label for="os"&gt;Operating system:&lt;/label&gt;
-				&lt;select id="os"&gt;
-					&lt;option value="windows" selected="selected"&gt;Windows&lt;/option&gt;
-					&lt;option value="mac"&gt;Mac&lt;/option&gt;
-					&lt;option value="linux"&gt;Linux&lt;/option&gt;
-				&lt;/select></example>
-			<example>select_example.png</example>
-		</examples>
-	</tag>
-	<tag>
-		<name>option</name>
-		<definition>The &lt;option&gt; tag defines an option in a select list. These elements go inside a &lt;select&gt; or &lt;datalist&gt; element.</definition>
-		<attributes>
-			<attribute>
-				<attribute_name>selected</attribute_name>
-				<attribute_definition>When present, it specifies that an option should be pre-selected when the page loads. The pre-selected option will be displayed first in the drop-down list.</attribute_definition>
-			</attribute>
-			<attribute>
-				<attribute_name>value</attribute_name>
-				<attribute_definition>The content between the opening &lt;option&gt; and closing &lt;/option&gt; tags is what the browsers will display in a drop-down list. However, the value of the value attribute is what will be sent to the server when a form is submitted.</attribute_definition>
-			</attribute>
-		</attributes>
-		<examples>
-			<example>&lt;label for="country"&gt;Choose a country:&lt;/label&gt;
-				&lt;select id="country"&gt;
-					&lt;option value="spain"&gt;Spain&lt;/option&gt;
-					&lt;option value="france"&gt;France&lt;/option&gt;
-					&lt;option value="italy"&gt;Italy&lt;/option&gt;
-					&lt;option value="germany"&gt;Germany&lt;/option&gt;
-				&lt;/select></example>
-			<example>option_example.png</example>
-		</examples>
-	</tag>
-	<tag>
-		<name>textarea</name>
-		<definition>The &lt;textarea&gt; tag defines a multi-line text input control.</definition>
-		<attributes>
-			<attribute>
-				<attribute_name>This tag only supports global and event attributes in HTML.</attribute_name>
-			</attribute>
-		</attributes>
-		<examples>
-			<example>&lt;!DOCTYPE html&gt;
-			&lt;html&gt;
-				&lt;body&gt;
-					&lt;h1&gt;The textarea element&lt;/h1&gt;
-						&lt;label for="w3mission"&gt;W3Schools' mission:&lt;/label&gt;
-							&lt;textarea id="w3mission" rows="4" cols="50"&gt;
-							At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.
-						&lt;/textarea&gt;
-				&lt;/body&gt;
-			&lt;/html&gt;</example>
-			<example>textarea_example.png</example>
-		</examples>
-	</tag>
-	<tag>
-		<name>button</name>
-		<definition>The &lt;button&gt; tag defines a clickable button.</definition>
-		<attributes>
-			<attribute>
-				<attribute_name>text</attribute_name>
-				<attribute_definition>Specifies an initial value for the button.</attribute_definition>
-			</attribute>
-			<attribute>
-				<attribute_name>type</attribute_name>
-				<attribute_definition>Specifies the type of button.</attribute_definition>
-			</attribute>
-			<attribute>
-				<attribute_name>name</attribute_name>
-				<attribute_definition>Specifies a name for the button.</attribute_definition>
-			</attribute>
-			<attribute>
-				<attribute_name>disabled</attribute_name>
-				<attribute_definition>Specifies that a button should be disabled.</attribute_definition>
-			</attribute>
-		</attributes>
-		<examples>
-			<example>&lt;html&gt;
-				&lt;body&gt;
-					&lt;button type="button" onclick="alert('Hello world!')"&gt;Click Me!&lt;/button&gt;
-				&lt;/body&gt;
-			&lt;/html&gt;</example>
-		<example>button_example.png</example>
-		</examples>
-	</tag>
-	<tag>
-		<name>div</name>
-		<definition>The &lt;div&gt; tag defines a division or a section in an HTML document.</definition>
-		<attributes>
-			<attribute>
-				<attribute_name>This tag only supports global and event attributes in HTML.</attribute_name>
-			</attribute>
-		</attributes>
-		<examples>
-			<example>&lt;!DOCTYPE html&gt;
-				&lt;html&gt;
-					&lt;body&gt;
-							&lt;h1&gt;The div element&lt;/h1&gt;
-						&lt;div style="background-color:lightblue"&gt;
-							&lt;h3&gt;This is a heading in a div element&lt;/h3&gt;
-							&lt;p&gt;This is some text in a div element.&lt;/p&gt;
-						&lt;/div&gt;
-							&lt;p&gt;This is some text in a p element.&lt;/p&gt;
-					&lt;/body&gt;
-				&lt;/html&gt;</example>
-			<example>div_example.png</example>
-		</examples>
-	</tag>
-	<tag>
-		<name>span</name>
-		<definition>The &lt;span&gt; tag is used to group inline-elements in a document.</definition>
-		<attributes>
-			<attribute>
-				<attribute_name>This tag only supports global and event attributes in HTML.</attribute_name>
-			</attribute>
-		</attributes>
-		<examples>
-			<example>&lt;!DOCTYPE html&gt;
-				&lt;html&gt;
-					&lt;body&gt;
-						&lt;h1&gt;The span element&lt;/h1&gt;
-						&lt;p&gt;My mother has &lt;span style="color:blue;font-weight:bold"&gt;blue&lt;/span&gt; eyes and my father has &lt;span style="color:darkolivegreen;font-weight:bold"&gt;dark green&lt;/span&gt; eyes.&lt;/p&gt;
-					&lt;/body&gt;
-				&lt;/html&gt;</example>
-			<example>span_example.png</example>
-		</examples>
-	</tag>
-		<tag>
-	 	 <name>header</name>
-	 	 <definition>The &lt;header&gt;; element represents a container for introductory content or a set of navigational links.</definition>
-	 	 <attributes>
-	 		 <attribute>
-	 			 <attribute_name>This tag only supports global and event attributes in HTML.</attribute_name>
-	 		 </attribute>
-	 	 </attributes>
-	 	 <examples>
-	 		 <example>&lt;article&gt;
-	 				 &lt;header&gt;
-	 					 &lt;h1&gt;Most important heading here&lt;/h1&gt;
-	 					 &lt;h2&gt;Less important heading here&lt;/h2&gt;
-	 					 &lt;p&gt;Some additional information here&lt;/p&gt;
-	 				 &lt;/header&gt;
-	 				 &lt;p&gt;Lorem Ipsum dolor set amet....&lt;/p&gt;
-	 			 &lt;/article&gt;</example>
-	 		 <example>header_example.png</example>
-	 	 </examples>
-	  </tag>
-	  <tag>
-	 	 <name>footer</name>
-	 	 <definition>The &lt;footer&gt; tag defines a footer for a document or section.</definition>
-	 	 <attributes>
-	 		 <attribute>
-	 			 <attribute_name>This tag only supports global and event attributes in HTML.</attribute_name>
-	 		 </attribute>
-	 	 </attributes>
-	 	 <examples>
-	 		 <example>&lt;footer&gt;
-	 				 &lt;p&gt;Posted by: Hege Refsnes&lt;/p&gt;
-	 				 &lt;p&gt;Contact information: &lt;a href="mailto:someone@example.com"&gt;
-	 				 someone@example.com&lt;/a&gt;.&lt;/p&gt;
-	 			 &lt;/footer&gt;</example>
-	 		 <example>footer_example.png</example>
-	 	 </examples>
-	  </tag>
-	  <tag>
-	 	 <name>nav</name>
-	 	 <definition>The &lt;nav&gt; tag defines a set of navigation links.</definition>
-	 	 <attributes>
-	 		 <attribute>
-	 			 <attribute_name>This tag only supports global and event attributes in HTML.</attribute_name>
-	 		 </attribute>
-	 	 </attributes>
-	 	 <examples>
-	 		 <example>&lt;nav&gt;
-	 				 &lt;a href="/html/"&gt;HTML&lt;/a&gt; |
-	 				 &lt;a href="/css/"&gt;CSS&lt;/a&gt; |
-	 				 &lt;a href="/js/"&gt;JavaScript&lt;/a&gt; |
-	 				 &lt;a href="/jquery/"&gt;jQuery&lt;/a&gt;
-	 			 &lt;/nav&gt;</example>
-	 		 <example>nav_example.png</example>
-	 	 </examples>
-	  </tag>
+						<attribute_name>action</attribute_name>
+						<attribute_definition>It is mandatory. It contains the URL where to send the form-data when the form is submitted.</attribute_definition>
+					</attribute>
+					<attribute>
+						<attribute_name>method</attribute_name>
+						<attribute_definition>It specifies how to send form-data, either as URL variables (with method="get") or as HTTP post transaction (with method="post").</attribute_definition>
+					</attribute>
+					<attribute>
+						<attribute_name>name</attribute_name>
+						<attribute_definition>The name attribute specifies the name of a form and it is used to reference elements in a JavaScript, or to reference form data after a form is submitted.</attribute_definition>
+					</attribute>
+					<attribute>
+						<attribute_name>enctype</attribute_name>
+						<attribute_definition>The enctype attribute, which can be used only if method="post", specifies how the form-data should be encoded when submitting it to the server. This field is required as enctype="multipart/form-data" when you are using forms that have a file upload control.</attribute_definition>
+					</attribute>
+				</attributes>
+				<examples>
+					<codeexamples>
+						<example>&lt;form action="/action_page.php" method="get"&gt;
+  								&lt;label for="fname"&gt;Name:&lt;/label&gt;
+  								&lt;input type="text" id="fname" name="fname"&gt;&lt;br&gt;&lt;br&gt;
+  								&lt;input type="submit" value="Submit"&gt;
+  							&lt;/form></example>
+  					<example>&lt;form action="http://www.example.com/my_formular.php" method="post"&gt;
+  								&lt;label for="color"&gt;Write your color preference:&lt;/label&gt;
+  								&lt;input type="text" id="color" name="color"&gt;&lt;br&gt;
+  								&lt;input type="submit" value="Send"&gt;
+  							&lt;/form></example>
+				 </codeexamples>
+				 <imageexamples>
+				 <image>images/tag-examples/form_example.png</image>
+				 </imageexamples>
+				</examples>
+			</tag>
+			<tag>
+				<name>input</name>
+				<definition>The &lt;input&gt; tag specifies an input field where the user can enter data. It is used within a &lt;form&gt; element to declare input controls that allow users to input data. An input field can vary in many ways, depending on the type attribute.</definition>
+				<attributes>
+					<attribute>
+						<attribute_name>name</attribute_name>
+						<attribute_definition>The name attribute specifies the name of a form and it is used to reference elements in a JavaScript, or to reference form data after a form is submitted. Only form elements with a name attribute will have their values passed when submitting a form.</attribute_definition>
+					</attribute>
+					<attribute>
+						<attribute_name>type</attribute_name>
+						<attribute_definition>The type attribute specifies the type of &lt;input&gt; element to display. The default type is text. Although not mandatory, it is good to have it.</attribute_definition>
+					</attribute>
+					<attribute>
+						<attribute_name>value</attribute_name>
+						<attribute_definition>The value attribute specifies the value of an &lt;input&gt; element. It is used differently depending on the input type. For "button", "reset", and "submit" it defines the text on the button, for "text", "password", and "hidden" it defines the initial (default) value of the input field, and for "checkbox", "radio", "image" it defines the value associated with the input (this is also the value that is sent on submit).</attribute_definition>
+					</attribute>
+					<attribute>
+						<attribute_name>size</attribute_name>
+						<attribute_definition>The size attribute specifies the visible width, in characters, of an &lt;input&gt; element.</attribute_definition>
+					</attribute>
+					<attribute>
+						<attribute_name>checked</attribute_name>
+						<attribute_definition>The checked attribute is a boolean attribute that, if present, specifies that an &lt;input&gt; element should be pre-selected (checked) when the page loads. It can be used with checkboxes and radio buttons.</attribute_definition>
+					</attribute>
+				</attributes>
+				<examples>
+					<codeexamples>
+						<example>&lt;form action="/action_page.php"&gt;
+								&lt;label for="fname"&gt;First name:&lt;/label&gt;
+								&lt;input type="text" id="fname" name="fname"&gt;&lt;br&gt;&lt;br&gt;
+								&lt;label for="lname"&gt;Last name:&lt;/label&gt;
+								&lt;input type="text" id="lname" name="lname"&gt;&lt;br&gt;&lt;br&gt;
+								&lt;input type="submit" value="Submit"&gt;
+							&lt;form&gt;</example>
+				 </codeexamples>
+				 <imageexamples>
+				 <image>images/tag-examples/input_example.png</image>
+				 </imageexamples>
+				</examples>
+			</tag>
+			<tag>
+				<name>label</name>
+				<definition>The &lt;label&gt; tag defines a label for several elements. Among its benefits we find that screen reader users will read out the label when the user is focused on the element, and also that if a user clicks the text within the &lt;label&gt; element, it toggles the input (this increases the hit area).</definition>
+				<attributes>
+					<attribute>
+						<attribute_name>for</attribute_name>
+						<attribute_definition>It specifies which form element a label is bound to. It should be equal to the id attribute of the related element to bind them together.</attribute_definition>
+					</attribute>
+				</attributes>
+				<examples>
+					<codeexamples>
+						<example>&lt;form action="/action_page.php"&gt;
+								&lt;label for="male"&gt;Male&lt;/label&gt;
+								&lt;input type="radio" id="male" name="gender" value="male"&gt;&lt;br&gt;
+								&lt;label for="female"&gt;Female&lt;/label&gt;
+								&lt;input type="radio" id="female" name="gender" value="female"&gt;&lt;br&gt;
+								&lt;input type="submit" value="Submit"&gt;
+							&lt;/form></example>
+				 </codeexamples>
+				 <imageexamples>
+				 <image>images/tag-examples/label_example.png</image>
+				 </imageexamples>
+				</examples>
+			</tag>
+			<tag>
+				<name>select</name>
+				<definition>The &lt;select&gt; element is used to create a drop-down list. It is used with &lt;option&gt; tags inside that define the available options in the list.</definition>
+				<attributes>
+					<attribute>
+						<attribute_name>multiple</attribute_name>
+						<attribute_definition>When present, it specifies that multiple options can be selected at once.</attribute_definition>
+					</attribute>
+					<attribute>
+						<attribute_name>name</attribute_name>
+						<attribute_definition>It specifies the name for a drop-down list. It is used to reference elements in a JavaScript, or to reference form data after a form is submitted.</attribute_definition>
+					</attribute>
+					<attribute>
+						<attribute_name>required</attribute_name>
+						<attribute_definition>When present, it specifies the user is required to select a value before submitting the form.</attribute_definition>
+					</attribute>
+					<attribute>
+						<attribute_name>size</attribute_name>
+						<attribute_definition>It specifies the number of visible options in a drop-down list. If greater than 1, but lower than the total number of options in the list, the browser will add a scroll bar to indicate that there are more options to view.</attribute_definition>
+					</attribute>
+				</attributes>
+				<examples>
+					<codeexamples>
+						<example>&lt;label for="cars"&gt;Choose a car:&lt;/label&gt;
+							&lt;select id="cars"&gt;
+								&lt;option value="volvo"&gt;Volvo&lt;/option&gt;
+								&lt;option value="saab"&gt;Saab&lt;/option&gt;
+								&lt;option value="mercedes"&gt;Mercedes&lt;/option&gt;
+								&lt;option value="audi"&gt;Audi&lt;/option&gt;
+							&lt;/select></example>
+						<example>&lt;label for="os"&gt;Operating system:&lt;/label&gt;
+							&lt;select id="os"&gt;
+								&lt;option value="windows" selected="selected"&gt;Windows&lt;/option&gt;
+								&lt;option value="mac"&gt;Mac&lt;/option&gt;
+								&lt;option value="linux"&gt;Linux&lt;/option&gt;
+							&lt;/select></example>
+				 </codeexamples>
+				 <imageexamples>
+				 <image>images/tag-examples/select_example.png</image>
+				 </imageexamples>
+				</examples>
+			</tag>
+			<tag>
+				<name>option</name>
+				<definition>The &lt;option&gt; tag defines an option in a select list. These elements go inside a &lt;select&gt; or &lt;datalist&gt; element.</definition>
+				<attributes>
+					<attribute>
+						<attribute_name>selected</attribute_name>
+						<attribute_definition>When present, it specifies that an option should be pre-selected when the page loads. The pre-selected option will be displayed first in the drop-down list.</attribute_definition>
+					</attribute>
+					<attribute>
+						<attribute_name>value</attribute_name>
+						<attribute_definition>The content between the opening &lt;option&gt; and closing &lt;/option&gt; tags is what the browsers will display in a drop-down list. However, the value of the value attribute is what will be sent to the server when a form is submitted.</attribute_definition>
+					</attribute>
+				</attributes>
+				<examples>
+					<codeexamples>
+						<example>&lt;label for="country"&gt;Choose a country:&lt;/label&gt;
+							&lt;select id="country"&gt;
+								&lt;option value="spain"&gt;Spain&lt;/option&gt;
+								&lt;option value="france"&gt;France&lt;/option&gt;
+								&lt;option value="italy"&gt;Italy&lt;/option&gt;
+								&lt;option value="germany"&gt;Germany&lt;/option&gt;
+							&lt;/select></example>
+				 </codeexamples>
+				 <imageexamples>
+				 <image>images/tag-examples/option_example.png</image>
+				 </imageexamples>
+				</examples>
+			</tag>
+			<tag>
+				<name>textarea</name>
+				<definition>The &lt;textarea&gt; tag defines a multi-line text input control.</definition>
+				<attributes>
+					<attribute>
+						<attribute_name>This tag only supports global and event attributes in HTML.</attribute_name>
+					</attribute>
+				</attributes>
+				<examples>
+					<codeexamples>
+						<example>&lt;!DOCTYPE html&gt;
+						&lt;html&gt;
+							&lt;body&gt;
+								&lt;h1&gt;The textarea element&lt;/h1&gt;
+									&lt;label for="w3mission"&gt;W3Schools' mission:&lt;/label&gt;
+										&lt;textarea id="w3mission" rows="4" cols="50"&gt;
+										At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.
+									&lt;/textarea&gt;
+							&lt;/body&gt;
+						&lt;/html&gt;</example>
+				 </codeexamples>
+				 <imageexamples>
+				 <image>images/tag-examples/textarea_example.png</image>
+				 </imageexamples>
+				</examples>
+			</tag>
+			<tag>
+				<name>button</name>
+				<definition>The &lt;button&gt; tag defines a clickable button.</definition>
+				<attributes>
+					<attribute>
+						<attribute_name>text</attribute_name>
+						<attribute_definition>Specifies an initial value for the button.</attribute_definition>
+					</attribute>
+					<attribute>
+						<attribute_name>type</attribute_name>
+						<attribute_definition>Specifies the type of button.</attribute_definition>
+					</attribute>
+					<attribute>
+						<attribute_name>name</attribute_name>
+						<attribute_definition>Specifies a name for the button.</attribute_definition>
+					</attribute>
+					<attribute>
+						<attribute_name>disabled</attribute_name>
+						<attribute_definition>Specifies that a button should be disabled.</attribute_definition>
+					</attribute>
+				</attributes>
+				<examples>
+					<codeexamples>
+						<example>&lt;html&gt;
+							&lt;body&gt;
+								&lt;button type="button" onclick="alert('Hello world!')"&gt;Click Me!&lt;/button&gt;
+							&lt;/body&gt;
+						&lt;/html&gt;</example>
+				 </codeexamples>
+				 <imageexamples>
+				 <image>images/tag-examples/button_example.png</image>
+				 </imageexamples>
+				</examples>
+			</tag>
+		</type>
+
+
+		<type name="container">
+			<tag>
+				<name>div</name>
+				<definition>The &lt;div&gt; tag defines a division or a section in an HTML document.</definition>
+				<attributes>
+					<attribute>
+						<attribute_name>This tag only supports global and event attributes in HTML.</attribute_name>
+					</attribute>
+				</attributes>
+				<examples>
+					<codeexamples>
+						<example>&lt;!DOCTYPE html&gt;
+							&lt;html&gt;
+								&lt;body&gt;
+										&lt;h1&gt;The div element&lt;/h1&gt;
+									&lt;div style="background-color:lightblue"&gt;
+										&lt;h3&gt;This is a heading in a div element&lt;/h3&gt;
+										&lt;p&gt;This is some text in a div element.&lt;/p&gt;
+									&lt;/div&gt;
+										&lt;p&gt;This is some text in a p element.&lt;/p&gt;
+								&lt;/body&gt;
+							&lt;/html&gt;</example>
+				 </codeexamples>
+				 <imageexamples>
+				 <image>images/tag-examples/div_example.png</image>
+				 </imageexamples>
+				</examples>
+			</tag>
+			<tag>
+				<name>span</name>
+				<definition>The &lt;span&gt; tag is used to group inline-elements in a document.</definition>
+				<attributes>
+					<attribute>
+						<attribute_name>This tag only supports global and event attributes in HTML.</attribute_name>
+					</attribute>
+				</attributes>
+				<examples>
+					<codeexamples>
+						<example>&lt;!DOCTYPE html&gt;
+							&lt;html&gt;
+								&lt;body&gt;
+									&lt;h1&gt;The span element&lt;/h1&gt;
+									&lt;p&gt;My mother has &lt;span style="color:blue;font-weight:bold"&gt;blue&lt;/span&gt; eyes and my father has &lt;span style="color:darkolivegreen;font-weight:bold"&gt;dark green&lt;/span&gt; eyes.&lt;/p&gt;
+								&lt;/body&gt;
+							&lt;/html&gt;</example>
+				 </codeexamples>
+				 <imageexamples>
+				 <image>images/tag-examples/span_example.png</image>
+				 </imageexamples>
+				</examples>
+			</tag>
+			<tag>
+		 	 <name>header</name>
+		 	 <definition>The &lt;header&gt;; element represents a container for introductory content or a set of navigational links.</definition>
+		 	 <attributes>
+		 		 <attribute>
+		 			 <attribute_name>This tag only supports global and event attributes in HTML.</attribute_name>
+		 		 </attribute>
+		 	 </attributes>
+		 	 <examples>
+				 <codeexamples>
+					 <example>&lt;article&gt;
+			 				 &lt;header&gt;
+			 					 &lt;h1&gt;Most important heading here&lt;/h1&gt;
+			 					 &lt;h2&gt;Less important heading here&lt;/h2&gt;
+			 					 &lt;p&gt;Some additional information here&lt;/p&gt;
+			 				 &lt;/header&gt;
+			 				 &lt;p&gt;Lorem Ipsum dolor set amet....&lt;/p&gt;
+			 			 &lt;/article&gt;</example>
+				</codeexamples>
+				<imageexamples>
+				<image>images/tag-examples/header_example.png</image>
+				</imageexamples>
+		 	 </examples>
+		  </tag>
+		  <tag>
+		 	 <name>footer</name>
+		 	 <definition>The &lt;footer&gt; tag defines a footer for a document or section.</definition>
+		 	 <attributes>
+		 		 <attribute>
+		 			 <attribute_name>This tag only supports global and event attributes in HTML.</attribute_name>
+		 		 </attribute>
+		 	 </attributes>
+		 	 <examples>
+				 <codeexamples>
+					 <example>&lt;footer&gt;
+			 				 &lt;p&gt;Posted by: Hege Refsnes&lt;/p&gt;
+			 				 &lt;p&gt;Contact information: &lt;a href="mailto:someone@example.com"&gt;
+			 				 someone@example.com&lt;/a&gt;.&lt;/p&gt;
+			 			 &lt;/footer&gt;</example>
+				</codeexamples>
+				<imageexamples>
+				<image>images/tag-examples/footer_example.png</image>
+				</imageexamples>
+		 	 </examples>
+		  </tag>
+		  <tag>
+		 	 <name>nav</name>
+		 	 <definition>The &lt;nav&gt; tag defines a set of navigation links.</definition>
+		 	 <attributes>
+		 		 <attribute>
+		 			 <attribute_name>This tag only supports global and event attributes in HTML.</attribute_name>
+		 		 </attribute>
+		 	 </attributes>
+		 	 <examples>
+				 <codeexamples>
+					 <example>&lt;nav&gt;
+			 				 &lt;a href="/html/"&gt;HTML&lt;/a&gt; |
+			 				 &lt;a href="/css/"&gt;CSS&lt;/a&gt; |
+			 				 &lt;a href="/js/"&gt;JavaScript&lt;/a&gt; |
+			 				 &lt;a href="/jquery/"&gt;jQuery&lt;/a&gt;
+			 			 &lt;/nav&gt;</example>
+				</codeexamples>
+				<imageexamples>
+				<image>images/tag-examples/nav_example.png</image>
+				</imageexamples>
+		 	 </examples>
+		  </tag>
+		</type>
 
 	</tags>
 </root>
